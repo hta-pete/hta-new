@@ -1,0 +1,33 @@
+#home-hero{
+  position:relative;
+  width:100%;
+  height:calc(100vh - 120px);
+  .hero-copy{
+    z-index:20;
+    position:absolute;
+    width:100%;
+    top:50%;
+    text-align:center;
+    color:white;
+    @include transform(translate3d(0,-50%,0));
+    h2{
+      font-family:"Roboto";
+      font-size: 130px;
+      line-height:1;
+      letter-spacing:-6px;
+      will-change:transform;
+    }
+    p{
+      font-size:30px;
+      line-height:1;
+      margin-top:10px;
+      a{
+        color:white;
+        border-bottom:1px solid rgba(255,255,255,0.7);
+      }
+    }
+    .btn-play{
+      margin-top:50px;
+    }
+  }
+}
