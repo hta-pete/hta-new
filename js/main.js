@@ -71,12 +71,8 @@ var flkty = new Flickity( elem, {
 
 
 window.addEventListener("resize", function(){
-
   flkty.resize();
-
 });
-
-
 
 oldx = 0;
 
@@ -88,92 +84,35 @@ flkty.on( 'dragStart', function( event, pointer ) {
 
 flkty.on( 'dragMove', function( event, pointer ) {
 
-    
     if (event.pageX < oldx) {
 
         //left
         for (var i = 0; i < elements.length; i++) {
-
-        	 elements[i].style.transform = "rotateY(" + -(event.pageX - oldx)*0.025 + "deg)";
-			
-		}
-       
-
+        	elements[i].style.transform = "rotateY(" + -(event.pageX - oldx)*0.025 + "deg)";
+		    }
+  
     } else if (event.pageX > oldx) {
 
-        //right
-        for (var i = 0; i < elements.length; i++) {
-
-        	 elements[i].style.transform = "rotateY(" + -(event.pageX - oldx)*0.025 + "deg)";
-			
-		}
+      //right
+      for (var i = 0; i < elements.length; i++) {
+      	elements[i].style.transform = "rotateY(" + -(event.pageX - oldx)*0.025 + "deg)";
+	    }
 
     }
 
 });
-
 
 flkty.on( 'dragEnd', function( event, pointer ) {
-
-      
-    for (var i = 0; i < elements.length; i++) {
-
-    	 elements[i].style.transform = "rotateY(0deg)";
-		
+  
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.transform = "rotateY(0deg)";
 	}
-
 
 });
 
 
 
 
-
-
-
-
-
-
-/*
-function draggable(element) {
-
-  var isMouseDown = false;
-  var mouseX;
-  var elementX    = 0;
-  
-  function onMouseDown(event) {
-    mouseX      = event.clientX;
-    isMouseDown = true;
-  }
-
-  function onMouseUp(event) {
-    isMouseDown = false;
-    elementX = -element.style.transform.replace(/[^\d.]/g, '');
-  }
-
-  function onMouseMove(event) {
-
-    if (!isMouseDown) return;
-
-    var deltaX   = event.clientX - mouseX;
-    var distance = elementX + deltaX;
-    var maxX     = -(element.offsetWidth - window.innerWidth);
-
-    if( distance < 0 && distance > maxX ){
-      element.style.transform = "translateX( " + distance + "px )";
-    }
-   
-  }
-
-  element.addEventListener('mousedown', onMouseDown);
-  document.addEventListener('mouseup', onMouseUp); 
-  document.addEventListener('mousemove', onMouseMove);
-
-}
-
-draggable(about_slider);
-
-*/
 
 
 
