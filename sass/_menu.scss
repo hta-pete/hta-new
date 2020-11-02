@@ -3,19 +3,6 @@
 HTA MENU
 
 –––––––––––––––––––––––––––––––––––––––– */
-.hta-menu-overlay{
-  z-index:800;
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(38, 48, 86, 0.9);
-  &.open{
-    display:block;
-  }
-}
 #hta-menu{
   z-index:888;
   position:fixed;
@@ -24,12 +11,33 @@ HTA MENU
   background:$primary;
   width:100%;
   height:0;
-  overflow:hidden;
-  @include transition(height 0.2s $easeOutExpo);
+  overflow:scroll;
   &.open{
     height:100vh;
+    .hta-menu_close-btn{
+      @include opacity(0.6);
+      @include transform(scale(1));
+    }
+  }
+  .hta-menu_close-btn{
+    z-index:2;
+    position:absolute;
+    top:15px;
+    right:30px;
+    cursor:pointer;
+    span{
+      display:block;
+      color:white;
+      font-size:60px;
+      font-weight:300;
+      @include transform(rotate(45deg));
+    }
+    @include opacity(0);
+    @include transform(scale(0));
+    @include transition(all 0.6s $easeOutExpo);
   }
   .nav-wrap{
+    z-index:0;
     position:absolute;
     display:flex;
     align-items: center;
@@ -63,44 +71,15 @@ HTA MENU
       font-family:"Roboto";
       font-size: 80px;
       line-height:1;
-      font-weight:700;
-      letter-spacing:-2px;
+      font-weight:500;
+      color:white;
+      letter-spacing:-3.5px;
       margin:10px 0;
       cursor:pointer;
       will-change:transform;
       @include opacity(0);
       @include transform(translateY(100px));
       @include transition(color 0.6s $easeOutExpo);
-      a{
-        color:white;
-      }
-      &.social-menu{
-        margin-top:0px;
-        li{
-          display:inline-block;
-          margin:0 15px;
-          font-size:22px;
-          line-height:22px;
-          font-weight:500;
-          letter-spacing:-0.25px;
-          i{
-            font-size:28px;
-          }
-          &.divider{
-            margin:0;
-            font-weight:400;
-            color:rgba(255,255,255,0.5);
-          }
-        }
-      }
-      &.copyright{
-          display:inline-block;
-          font-size:14px;
-          line-height:14px;
-          font-weight:400;
-          letter-spacing:-0.25px;
-          color:rgba(255,255,255,0.5);
-      }
     }
   }
 }
