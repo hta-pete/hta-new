@@ -9,7 +9,8 @@ var homeHero      = document.getElementById("home-hero"),
     main          = document.querySelector("main"),
     scroll_cue    = document.querySelector(".scroll-cue"),
     section       = document.getElementsByClassName("section"),
-    service       = document.querySelectorAll('.featured-service');
+    service       = document.querySelectorAll('.featured-service'),
+    form          = document.getElementById("form");
 
 var lastScrollTop = 0;
 
@@ -49,8 +50,19 @@ function toggleMenu(){
 
 }
 
+function closeMenu(){
+
+  htaMenu.classList.remove("open");
+  menu.classList.remove("active");
+  header.classList.remove("hide");
+  hta_form.style.display = "flex";
+  hta_thank_you.classList.remove("active");
+  form.reset();
+
+}
+
 menuBtn.addEventListener("click", toggleMenu);
-htaMenuClose.addEventListener("click", toggleMenu);  
+htaMenuClose.addEventListener("click", closeMenu);  
 window.addEventListener("scroll", _.throttle(scrollStuff, 200));
 
 var elem = document.querySelector('.hero-slider');
@@ -59,11 +71,12 @@ var slides = elem.querySelectorAll(".hero-slide");
 var flkty = new Flickity( elem, {
   
   fade: true,
-  autoPlay: 2500,
+  autoPlay: 2200,
   pauseAutoPlayOnHover: false,
   draggable: false,
   prevNextButtons: false,
-  pageDots: false
+  pageDots: false,
+  imagesLoaded: true
 
 });
 
@@ -131,6 +144,35 @@ function activeService(elem){
     }
   }
 }
+
+var hta_form      = document.getElementById("hta-form");
+var hta_thank_you = document.getElementById("hta-thank-you");
+var submit        = document.getElementById("form-submit");
+
+function createThankYou(){
+
+  var name                   = form.querySelector('[name="first-name"]').value;
+  var company_name           = form.querySelector('[name="company-name"]').value;
+  var thank_you_message      = hta_thank_you.querySelector('h2');
+  var thank_you_message_2    = hta_thank_you.querySelector('h3');
+  var thank_you_name         = thank_you_message.querySelector(".form-name");
+  var thank_you_company_name = thank_you_message_2.querySelector(".form-company-name");
+
+
+  thank_you_name.innerHTML = name;
+  thank_you_company_name.innerHTML = company_name;
+  hta_form.style.display = "none";
+  hta_thank_you.classList.add("active");
+
+}
+
+submit.addEventListener("click", function(e){
+
+  e.preventDefault();
+  createThankYou();
+
+});
+
 
 
 

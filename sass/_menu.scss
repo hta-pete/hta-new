@@ -18,6 +18,19 @@ HTA MENU
       @include opacity(0.6);
       @include transform(scale(1));
     }
+    .logo-form{
+      @include opacity(1);
+      @include transform(scale(1));
+    }
+  }
+  .logo-form{
+    z-index:2;
+    position:absolute;
+    top:30px;
+    left:30px;
+    @include opacity(0);
+    @include transform(scale(0));
+    @include transition(all 0.6s $easeOutExpo);
   }
   .hta-menu_close-btn{
     z-index:2;
@@ -53,7 +66,7 @@ HTA MENU
     text-align:center;
     &.active{
       display:block;
-      li{
+      div{
         animation-name: navIn;
         animation-duration: 800ms;
         animation-fill-mode: both;
@@ -65,21 +78,25 @@ HTA MENU
         }
       }
     }
-    li{
+    .nav-item{
       position:relative;
       display:block;
-      font-family:"Roboto";
-      font-size: 80px;
-      line-height:1;
-      font-weight:500;
       color:white;
-      letter-spacing:-3.5px;
       margin:10px 0;
       cursor:pointer;
       will-change:transform;
       @include opacity(0);
       @include transform(translateY(100px));
       @include transition(color 0.6s $easeOutExpo);
+    }
+    h3{
+      font-size: min(max(30px, 4vw), 65px);
+      line-height:1.2;
+      letter-spacing:min(max(0px, 4vw), -2px);
+      margin-bottom:60px;
+    }
+    p{
+      font-size:20px;
     }
   }
 }
@@ -93,4 +110,117 @@ HTA MENU
     opacity: 1;
     @include transform( translateY(0) rotate(0.01deg) );
   } 
+}
+
+
+form{
+  margin-top:40px;
+  .field, .fields{
+    margin-top:2%;
+  }
+  .col-1-2{
+    width:49%;
+    margin-right:2%;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+  input{
+    display:block;
+    width:100%;
+    height:50px;
+    padding:0 15px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0);
+    color:white;
+    font-size:18px;
+    @include transition(border-color 0.8s $easeOutExpo);
+    &:focus{
+      border-color:rgba(255,255,255,0.6);
+      outline:none;
+    }
+  }
+  textarea{
+    display:block;
+    width:100%;
+    height:200px;
+    resize:none;
+    padding:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0);
+    color:white;
+    font-size:18px;
+    @include transition(border-color 0.8s $easeOutExpo);
+    &:focus{
+      border-color:rgba(255,255,255,0.6);
+      outline:none;
+    }
+  }
+  button.btn-primary{
+      display:block;
+      width:100%;
+      height:60px;
+      padding:0 20px;
+      margin-top:30px;
+      border:none;
+      background:$red;
+      font-size:20px;
+      font-weight:700;
+      color:white;
+      cursor:pointer;
+      @include transition(background 0.8s $easeOutExpo);
+      &:hover{
+        background:darken($red, 5%);
+      }
+  }
+  input, textarea{
+    font-family:"Roboto";
+    ::-webkit-input-placeholder { 
+      color:$secondary;
+    }
+    ::-moz-placeholder { 
+      color:$secondary;
+    }
+    :-ms-input-placeholder { 
+      color:$secondary;
+    }
+    :-moz-placeholder { 
+      color:$secondary;
+    }
+  }
+}
+
+
+#hta-thank-you{
+  z-index:0;
+  position:absolute;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  color:white;
+  text-align:center;
+  h2, h3{
+    font-size: min(max(30px, 4vw), 50px);
+    line-height:1.2;
+    letter-spacing:min(max(0px, 4vw), -2px);
+    margin-bottom:0;
+  }
+  &.active{ 
+    display:flex;
+    h2, h3{
+      animation-name: navIn;
+      animation-duration: 800ms;
+      animation-fill-mode: both;
+      animation-timing-function: $easeOutExpo;
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+          animation-delay: 72ms * $i;
+        }
+      }
+    }
+  }
 }
