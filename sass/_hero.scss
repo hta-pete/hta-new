@@ -43,7 +43,7 @@
     height:100%;
     object-fit: cover;
     will-change: transform;
-    @include opacity(0.4);
+    @include opacity(0.6);
     @include transition(transform 2s $easeOutExpo);
     //filter:saturate(0%) contrast(175%) brightness(175%);
   }

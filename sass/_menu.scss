@@ -90,7 +90,7 @@ HTA MENU
       @include transition(color 0.6s $easeOutExpo);
     }
     h3{
-      font-size: min(max(30px, 4vw), 65px);
+      font-size: min(max(30px, 4vw), 50px);
       line-height:1.2;
       letter-spacing:min(max(0px, 4vw), -2px);
       margin-bottom:60px;
@@ -143,7 +143,7 @@ form{
   textarea{
     display:block;
     width:100%;
-    height:200px;
+    height:150px;
     resize:none;
     padding:15px;
     border:1px solid rgba(255,255,255,0.1);
