@@ -84,4 +84,19 @@
 }
 
 
+@media(max-width:480px){
+  #home-hero{
+    height:calc(100vh - 60px);
+    .flickity-viewport{
+      height:calc(100vh - 60px) !important;
+    }
+    .hero-copy{
+      text-align:center;
+    }
+  }
+  .scroll-cue{
+    font-size:17px;
+  }
+}
+
 

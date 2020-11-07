@@ -130,7 +130,7 @@ HELPERS
   position:relative;
   width:100%;
   max-width:1280px;
-  min-width:1280px;
+  //min-width:1280px;
   margin:0 auto;
   padding:0 1.5%;
 }
@@ -138,7 +138,7 @@ HELPERS
   position:relative;
   width:100%;
   max-width:800px;
-  min-width:800px;
+  //min-width:800px;
   margin:0 auto;
   padding:0 1.5%;
 }
@@ -146,7 +146,7 @@ HELPERS
   position:relative;
   width:100%;
   max-width:960px;
-  min-width:960px;
+  //min-width:960px;
   margin:0 auto;
   padding:0 1.5%;
 }
@@ -154,7 +154,7 @@ HELPERS
   position:relative;
   width:100%;
   max-width:1440px;
-  min-width:1440px;
+  //min-width:1440px;
   margin:0 auto;
   padding:0 1.5%;
 }
@@ -162,7 +162,7 @@ HELPERS
   position:relative;
   width:100%;
   max-width:650px;
-  min-width:650px;
+  //min-width:650px;
   margin:0 auto;
   padding:0 1.5%;
 }
@@ -231,7 +231,7 @@ html,body{
   font-family:"Roboto", sans-serif;
   color:$primary;
   background:white;
-  min-width:1440px;
+  //min-width:1440px;
 }
 
 /* –––––––––––––––––––––––––––––––––––––––
@@ -252,7 +252,41 @@ header{
   &.hide{
     @include transform(translateY(-80px));
   }
-  nav{
+  #nav{
+    width:100%;
+    height:80px;
+    ul{
+      height:100%;
+    }
+    li{
+      position:relative;
+      display:inline-block;
+      height:80px;
+      font-size:18px;
+      line-height:80px;
+      font-weight:500;
+      color:$primary;
+      letter-spacing:-0.25px;
+      cursor:pointer;
+      a{
+        color:$primary;
+        @include transition(color 0.6s $easeOutExpo);
+        &:hover{
+          color:$red;
+        }
+      }
+      &.active, &.clicked{
+        a{
+          color:$red;
+        }
+      }
+    }
+    .logo-header{
+      margin-top:22px;
+    }
+  }
+  #mobile-nav{
+    display:none;
     width:100%;
     height:80px;
     ul{
@@ -659,4 +693,44 @@ footer{
       color:$secondary;
     }
    }
+}
+
+
+
+
+
+@media(max-width:480px){
+  .container, .container-tiny, .container-small, .container-large, .container-form{
+    padding:0 15px;
+  }
+  h3{
+    margin-bottom:30px;
+  }
+  p{
+    font-size:17px;
+  }
+  section{
+    padding:60px 0;
+  }
+  header{
+    #nav{
+      display:none;
+    }
+    #mobile-nav{
+      display:block;
+    }
+  }
+  .featured-services{
+    margin-top:50px;
+    .row{
+      margin-top:0;
+    }
+    .col-1-2{
+      width:100%;
+      float:none;
+      height:240px;
+      max-height:400px;
+      margin-top:10px;
+    }
+  }
 }
