@@ -20,8 +20,8 @@ function scrollStuff(){
     flkty.pausePlayer();
   } else{
     scroll_cue.classList.remove("active");
-    flkty.unpausePlayer();
-    //flkty.player.play();
+    flkty.player.play();
+    flkty.resize();
   }
 
   checkSectionOffset();
