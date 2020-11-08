@@ -760,6 +760,28 @@ footer{
       }
     }
   }
+  .all-services{
+    margin-top:40px;
+    .all-services_items{
+      display:block;
+      ul{
+        list-style:none;
+        margin-bottom:15px;
+        &:last-of-type{
+          margin-bottom:0;
+        }
+        li{
+          text-align:center;
+          font-size:18px;
+          line-height:1.4;
+          margin-bottom:15px;
+          &:last-child{
+            margin-bottom:0;
+          }
+        }
+      }
+    }
+  }
   .team{
     padding:60px 0;
     .team-members{
@@ -781,5 +803,62 @@ footer{
         font-size:14px;
       }
     }
+  }
+  .work{
+    height:auto;
+    background:$primary;
+    color:white;
+    border-color:rgba(255,255,255,0.1);
+    .work-section, .container{
+      display:block;
+    }
+    .col-1-2{
+      float:none;
+    }
+    .work-copy{
+      width:100%;
+      margin-right:0;
+      h3{
+        text-align:center;
+      }
+    }
+    .work-slider{
+      width:100%;
+      background:$primary;
+      margin-top:50px;
+    }
+    .work-slide_label{
+      font-size:16px;
+      margin-top:15px;
+    }
+  }
+  footer{
+    display:block;
+     height:auto;
+     color:white;
+     text-align:center;
+     .footer-wrap{
+      width:100%;
+      margin-top:0;
+      padding:90px 0 120px 0;
+     }
+     .footer-nav{
+      display:block;
+      div{
+        margin-top:30px;
+      }
+     }
+     h2{
+      font-size: 35px;
+      letter-spacing:-1.5px;
+      margin-bottom:40px;
+     }
+     h5{
+      margin-bottom:10px;
+     }
+     li, span{
+      font-size:18px;
+      margin-bottom:3px;
+     }
   }
 }
