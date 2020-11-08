@@ -21,7 +21,7 @@ function scrollStuff(){
   } else{
     scroll_cue.classList.remove("active");
     flkty.unpausePlayer();
-    flkty.player.play();
+    //flkty.player.play();
   }
 
   checkSectionOffset();
