@@ -1645,6 +1645,9 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   #home-hero .hero-copy {
     text-align: center;
   }
+  #home-hero .hero-copy h1 {
+    font-size: 40px;
+  }
 
   .scroll-cue {
     font-size: 17px;

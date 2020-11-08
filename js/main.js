@@ -17,11 +17,10 @@ function scrollStuff(){
 
   if( window.scrollY > 0 ){
     scroll_cue.classList.add("active");
-    flkty.pausePlayer();
+    flkty.player.stop();
   } else{
     scroll_cue.classList.remove("active");
     flkty.player.play();
-    flkty.resize();
   }
 
   checkSectionOffset();
