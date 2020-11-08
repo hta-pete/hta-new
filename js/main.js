@@ -2,7 +2,7 @@ var homeHero      = document.getElementById("home-hero"),
     header        = document.getElementById("header"),
     nav           = document.getElementById("nav"),
     nav_link      = nav.querySelectorAll('.section-link');
-    menuBtn       = document.querySelector(".menu-btn"),
+    menuBtn       = document.querySelectorAll(".menu-btn"),
     htaMenu       = document.getElementById("hta-menu"),
     htaMenuClose  = document.querySelector(".hta-menu_close-btn"),
     menu          = htaMenu.querySelector(".hta-nav"),
@@ -61,10 +61,6 @@ function closeMenu(){
 
 }
 
-menuBtn.addEventListener("click", toggleMenu);
-htaMenuClose.addEventListener("click", closeMenu);  
-window.addEventListener("scroll", _.throttle(scrollStuff, 200));
-
 var elem = document.querySelector('.hero-slider');
 var slides = elem.querySelectorAll(".hero-slide");
 
@@ -91,20 +87,6 @@ var flkty2 = new Flickity( elem2, {
   draggable: false,
   prevNextButtons: false,
   pageDots: false
-
-});
-
-window.addEventListener("load", function(){
-
-  checkSectionOffset();
-
-});
-
-window.addEventListener("resize", function(){
-
-  flkty.resize();
-  flkty2.resize();
-  checkSectionOffset();
 
 });
 
@@ -166,11 +148,30 @@ function createThankYou(){
 
 }
 
-submit.addEventListener("click", function(e){
 
+
+
+for (var i = 0; i < menuBtn.length; i++) {
+  menuBtn[i].addEventListener("click", toggleMenu);
+}
+
+htaMenuClose.addEventListener("click", closeMenu);
+
+window.addEventListener("scroll", _.throttle(scrollStuff, 200));
+
+window.addEventListener("load", function(){
+  checkSectionOffset();
+});
+
+window.addEventListener("resize", function(){
+  flkty.resize();
+  flkty2.resize();
+  checkSectionOffset();
+});
+
+submit.addEventListener("click", function(e){
   e.preventDefault();
   createThankYou();
-
 });
 
 
