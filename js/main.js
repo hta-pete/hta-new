@@ -1,7 +1,7 @@
 var homeHero      = document.getElementById("home-hero"),
     header        = document.getElementById("header"),
     nav           = document.getElementById("nav"),
-    nav_link      = nav.querySelectorAll('.section-link');
+    nav_link      = nav.querySelectorAll('.section-link'),
     menuBtn       = document.querySelectorAll(".menu-btn"),
     htaMenu       = document.getElementById("hta-menu"),
     htaMenuClose  = document.querySelector(".hta-menu_close-btn"),
@@ -9,8 +9,7 @@ var homeHero      = document.getElementById("home-hero"),
     main          = document.querySelector("main"),
     scroll_cue    = document.querySelector(".scroll-cue"),
     section       = document.getElementsByClassName("section"),
-    service       = document.querySelectorAll('.featured-service'),
-    form          = document.getElementById("form");
+    service       = document.querySelectorAll('.featured-service');
 
 var lastScrollTop = 0;
 
@@ -18,10 +17,10 @@ function scrollStuff(){
 
   if( window.scrollY > 0 ){
     scroll_cue.classList.add("active");
-    flkty.pausePlayer()
+    flkty.pausePlayer();
   } else{
     scroll_cue.classList.remove("active");
-    flkty.unpausePlayer()
+    flkty.player.play();
   }
 
   checkSectionOffset();
@@ -127,18 +126,19 @@ function activeService(elem){
   }
 }
 
-var hta_form      = document.getElementById("hta-form");
-var hta_thank_you = document.getElementById("hta-thank-you");
-var submit        = document.getElementById("form-submit");
+var form          = document.getElementById("form"),
+    hta_form      = document.getElementById("hta-form"),
+    hta_thank_you = document.getElementById("hta-thank-you"),
+    submit        = document.getElementById("form-submit");
 
 function createThankYou(){
 
-  var name                   = form.querySelector('[name="first-name"]').value;
-  var company_name           = form.querySelector('[name="company-name"]').value;
-  var thank_you_message      = hta_thank_you.querySelector('h2');
-  var thank_you_message_2    = hta_thank_you.querySelector('h3');
-  var thank_you_name         = thank_you_message.querySelector(".form-name");
-  var thank_you_company_name = thank_you_message_2.querySelector(".form-company-name");
+  var name                   = form.querySelector('[name="first-name"]').value,
+      company_name           = form.querySelector('[name="company-name"]').value,
+      thank_you_message      = hta_thank_you.querySelector('h2'),
+      thank_you_message_2    = hta_thank_you.querySelector('h3'),
+      thank_you_name         = thank_you_message.querySelector(".form-name"),
+      thank_you_company_name = thank_you_message_2.querySelector(".form-company-name");
 
 
   thank_you_name.innerHTML = name;

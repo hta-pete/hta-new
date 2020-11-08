@@ -832,6 +832,12 @@ footer .copyright span {
   .featured-services {
     margin-top: 40px;
   }
+  .featured-services.container-large {
+    padding: 0 10px;
+  }
+  .featured-services .featured-service h4 {
+    font-size: 30px;
+  }
   .featured-services .featured-service .service-label {
     top: 14px;
     left: 10px;
@@ -1631,10 +1637,10 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
 
 @media (max-width: 480px) {
   #home-hero {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 120px);
   }
   #home-hero .flickity-viewport {
-    height: calc(100vh - 90px) !important;
+    height: calc(100vh - 120px) !important;
   }
   #home-hero .hero-copy {
     text-align: center;

@@ -722,7 +722,13 @@ footer{
   }
   .featured-services{
     margin-top:40px;
+    &.container-large{
+      padding:0 10px;
+    }
     .featured-service{
+      h4{
+        font-size:30px;
+      }
       .service-label{
         top:14px;
         left:10px;
