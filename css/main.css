@@ -251,7 +251,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "Roboto", sans-serif;
-  color: #151515;
+  color: #1b2026;
   background: white;
 }
 
@@ -296,12 +296,12 @@ header #nav li {
   font-size: 18px;
   line-height: 80px;
   font-weight: 500;
-  color: #151515;
+  color: #1b2026;
   letter-spacing: -0.25px;
   cursor: pointer;
 }
 header #nav li a {
-  color: #151515;
+  color: #1b2026;
   -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -332,12 +332,12 @@ header #mobile-nav li {
   font-size: 18px;
   line-height: 80px;
   font-weight: 500;
-  color: #151515;
+  color: #1b2026;
   letter-spacing: -0.25px;
   cursor: pointer;
 }
 header #mobile-nav li a {
-  color: #151515;
+  color: #1b2026;
   -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -381,7 +381,7 @@ SERVICES
 
 –––––––––––––––––––––––––––––––––––––––– */
 .services {
-  background: #151515;
+  background: #1b2026;
   color: white;
 }
 
@@ -395,7 +395,7 @@ SERVICES
   position: relative;
   height: 25vw;
   max-height: 400px;
-  background: #151515;
+  background: #1b2026;
   overflow: hidden;
   cursor: pointer;
 }
@@ -612,7 +612,7 @@ SERVICES
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: #151515;
+  color: #1b2026;
 }
 .all-services .all-services_items ul {
   list-style: none;
@@ -636,7 +636,7 @@ WORK
   width: 100%;
   height: calc(100vh - 79px);
   min-height: 720px;
-  background: #151515;
+  background: #1b2026;
   color: white;
   border-color: rgba(255, 255, 255, 0.1);
 }
@@ -649,7 +649,7 @@ WORK
 }
 .work .work-slider {
   width: 65%;
-  background: #151515;
+  background: #1b2026;
 }
 .work .work-slider .work-slide {
   position: absolute;
@@ -737,7 +737,7 @@ OUR TEAM
   margin-top: 80px;
 }
 .team .team-member_image {
-  background: #151515;
+  background: #1b2026;
   overflow: hidden;
 }
 .team .team-member_image img {
@@ -768,8 +768,8 @@ FOOTER
 footer {
   position: relative;
   height: 100vh;
-  background-color: #151515;
-  background-image: url(../img/footer-bg.jpg);
+  background-color: #1b2026;
+  background-image: url(../img/footer-bg-blue.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -916,7 +916,7 @@ footer .copyright span {
 
   .work {
     height: auto;
-    background: #151515;
+    background: #1b2026;
     color: white;
     border-color: rgba(255, 255, 255, 0.1);
   }
@@ -935,7 +935,7 @@ footer .copyright span {
   }
   .work .work-slider {
     width: 100%;
-    background: #151515;
+    background: #1b2026;
     margin-top: 50px;
   }
   .work .work-slide_label {
@@ -983,10 +983,11 @@ HTA MENU
   position: fixed;
   top: 0;
   right: 0;
-  background: #151515;
+  background: #1b2026;
   width: 100%;
   height: 0;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #hta-menu.open {
   height: 100vh;
@@ -1368,6 +1369,64 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   animation-delay: 1440ms;
 }
 
+@media (max-width: 480px) {
+  #hta-menu.open {
+    height: 100vh;
+  }
+  #hta-menu .logo-form {
+    top: 22px;
+    left: 15px;
+  }
+  #hta-menu .hta-menu_close-btn {
+    top: 5px;
+    right: 10px;
+  }
+  #hta-menu .nav-wrap {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  #hta-menu nav h3 {
+    font-size: 28px;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+  #hta-menu nav p {
+    font-size: 16px;
+  }
+
+  form {
+    margin-top: 40px;
+  }
+  form .field, form .fields {
+    margin-top: 2%;
+  }
+  form .col-1-2 {
+    width: 49%;
+    margin-right: 2%;
+  }
+  form .col-1-2:last-child {
+    margin-right: 0;
+  }
+  form input {
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  form textarea {
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  form button.btn-primary {
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 20px;
+    border: none;
+    background: #cf3d3d;
+    font-size: 18px;
+  }
+}
 .slider {
   position: relative;
   width: 100%;
@@ -1388,7 +1447,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   width: 100%;
   height: 100%;
   float: left;
-  background: #151515;
+  background: #1b2026;
   overflow: hidden;
 }
 .slide.slide-active .hero-copy p, .slide.slide-active .hero-copy h2, .slide.slide-active .hero-copy .btn-play {
@@ -1617,7 +1676,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   position: relative;
   width: 100%;
   height: calc(100vh - 5vh);
-  background: #151515;
+  background: #1b2026;
   overflow: hidden;
 }
 #home-hero .hero-copy {
