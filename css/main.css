@@ -808,7 +808,7 @@ footer .copyright span {
   color: #808284;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .container, .container-tiny, .container-small, .container-large, .container-form {
     padding: 0 15px;
   }
@@ -1372,7 +1372,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   animation-delay: 1440ms;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   #hta-menu.open {
     height: 100vh;
   }
@@ -1778,7 +1778,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   height: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   #home-hero {
     height: calc(100vh - 120px);
   }
