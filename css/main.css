@@ -1377,11 +1377,11 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
     height: 100vh;
   }
   #hta-menu .logo-form {
-    top: 22px;
-    left: 15px;
+    display: none;
   }
   #hta-menu .hta-menu_close-btn {
-    display: none;
+    top: 5px;
+    right: 10px;
   }
   #hta-menu .nav-wrap {
     display: flex;
