@@ -71,7 +71,6 @@ var flkty = new Flickity( elem, {
   draggable: false,
   prevNextButtons: false,
   pageDots: false,
-  imagesLoaded: true,
   wrapAround: true
 
 });
@@ -86,7 +85,8 @@ var flkty2 = new Flickity( elem2, {
   pauseAutoPlayOnHover: false,
   draggable: false,
   prevNextButtons: false,
-  pageDots: false
+  pageDots: false,
+  wrapAround: true
 
 });
 
