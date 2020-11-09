@@ -779,6 +779,9 @@ footer .footer-wrap {
   width: 100%;
   margin-top: 60px;
 }
+footer a {
+  color: white;
+}
 footer h2 {
   font-size: min(max(35px, 5vw), 80px);
   line-height: 1.2;
@@ -1378,8 +1381,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
     left: 15px;
   }
   #hta-menu .hta-menu_close-btn {
-    top: 5px;
-    right: 10px;
+    display: none;
   }
   #hta-menu .nav-wrap {
     display: flex;
