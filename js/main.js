@@ -15,18 +15,21 @@ var lastScrollTop = 0;
 
 function scrollStuff(){
 
-  if( window.scrollY > 0 ){
-    scroll_cue.classList.add("active");
+  if( window.scrollY > window.outerHeight/4 ){
     flkty.player.stop();
   } else{
-    scroll_cue.classList.remove("active");
     flkty.player.play();
+  }
+
+  if( window.scrollY > 0 ){
+    scroll_cue.classList.add("active");
+  } else{
+    scroll_cue.classList.remove("active");
   }
 
   checkSectionOffset();
 
 }
-
 
 function checkSectionOffset(){
   for (var i = 0; i < section.length; i++) {
@@ -38,15 +41,31 @@ function checkSectionOffset(){
   }
 }
 
+// Navigation Links
+for (var i = 0; i < nav_link.length; i++) {
+  nav_link[i].addEventListener("click", function(e){
+    e.preventDefault();
+    activeLinks(this);
+    if( index(this) !== 5 ){
+      window.scrollTo({ top: section[index(this)].offsetTop -79, behavior: 'smooth' });
+    }
+  });
+}
+function activeLinks(elem){
+  for (var i = 0; i < nav_link.length; i++) {
+      nav_link[i].classList.remove("active");
+      elem.classList.add("active");
+  }
+}
+
+
 function toggleMenu(){
 
   htaMenu.classList.toggle("open");
   menu.classList.toggle("active");
   this.classList.toggle("active");
   header.classList.toggle("hide");
-
-  checkSectionOffset();
-
+  document.body.classList.add("no-scroll");
 }
 
 function closeMenu(){
@@ -54,9 +73,11 @@ function closeMenu(){
   htaMenu.classList.remove("open");
   menu.classList.remove("active");
   header.classList.remove("hide");
+  document.body.classList.remove("no-scroll");
   hta_form.style.display = "flex";
   hta_thank_you.classList.remove("active");
   form.reset();
+  checkSectionOffset();
 
 }
 
@@ -66,7 +87,7 @@ var slides = elem.querySelectorAll(".hero-slide");
 var flkty = new Flickity( elem, {
   
   fade: true,
-  autoPlay: 2200,
+  autoPlay: 3000,
   pauseAutoPlayOnHover: false,
   draggable: false,
   prevNextButtons: false,
@@ -90,29 +111,8 @@ var flkty2 = new Flickity( elem2, {
 
 });
 
-// Navigation Links
-
-for (var i = 0; i < nav_link.length; i++) {
-  nav_link[i].addEventListener("click", function(e){
-    e.preventDefault();
-    activeLinks(this);
-    if( index(this) !== 5 ){
-      window.scrollTo({ top: section[index(this)].offsetTop -79, behavior: 'smooth' });
-    }
-  });
-}
-function index(el) {
-  return [...el.parentElement.children].indexOf(el);
-}
-function activeLinks(elem){
-  for (var i = 0; i < nav_link.length; i++) {
-      nav_link[i].classList.remove("active");
-      elem.classList.add("active")
-  }
-}
 
 // Featured Services
-
 for (var i = 0; i < service.length; i++) {
   service[i].addEventListener("click", function(e){
     activeService(this);
@@ -174,6 +174,12 @@ submit.addEventListener("click", function(e){
   e.preventDefault();
   createThankYou();
 });
+
+
+
+function index(el) {
+  return [...el.parentElement.children].indexOf(el);
+}
 
 
 

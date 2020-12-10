@@ -1,0 +1,228 @@
+/* –––––––––––––––––––––––––––––––––––––––
+
+SERVICES
+
+–––––––––––––––––––––––––––––––––––––––– */
+.services{
+	.section-heading{
+		margin-bottom:90px;
+	}
+}
+.featured-services{
+	margin:0 auto;
+  .row{
+    margin-bottom:20px;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+  .col-1-2{
+    position:relative;
+    height:calc(50vh - 2.5vh);
+    max-height:440px;
+    min-height:440px;
+    background:$blue_dark;
+    overflow:hidden;
+    cursor:pointer;
+    &:hover{
+      img{
+        @include transform(scale(1.05));
+        @include opacity(0.3);
+      }
+    }
+  }
+  .featured-service{
+    .service-label{
+      z-index:2;
+      position:absolute;
+      top:20px;
+      left:20px;
+      font-size:16px;
+      font-weight:500;
+      color:$secondary;
+      cursor:pointer;
+      @include opacity(0);
+      @include transform(scale(0));
+      @include transition(all 0.6s $easeOutExpo);
+    }
+    .service-close-btn{
+      z-index:2;
+      position:absolute;
+      top:10px;
+      right:20px;
+      cursor:pointer;
+      span{
+        display:inline-block;
+        color:white;
+        font-size:40px;
+        font-weight:300;
+        @include transform(rotate(45deg));
+        @include transition(color 0.6s $easeOutExpo);
+      }
+      @include opacity(0);
+      @include transform(scale(0));
+      @include transition(all 0.6s $easeOutExpo);
+    }
+    &.active{
+      .service-close-btn{
+        @include transform(scale(1));
+        @include opacity(1);
+      }
+      .service-preview {
+        .service-preview_inner-text{
+          h4{
+            @include opacity(0);
+            @include transform(translateY(-40px));
+          }
+        }
+        img{
+          @include opacity(0.1);
+        }
+      }
+      .service-reveal {
+        .service-reveal_inner-text{
+          h4{
+            @include opacity(1);
+            @include transform(translateY(0));
+          }
+          p{
+            @include opacity(1);
+            @include transform(translateY(0));
+          }
+        }
+      }
+    }
+  }
+  .service-preview{
+  	position:absolute;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:100%;
+    .service-preview_inner-text{
+      z-index:2;
+      position:absolute;
+      bottom:0;
+      left:0;
+      padding:60px;
+      color:white;
+      h4{
+        z-index:0;
+        font-size:30px;
+        line-height:1.2;
+        letter-spacing:-0.5px;
+        @include transition(all 0.4s $easeOutExpo);
+        will-change:transform;
+      }
+    }
+    img{
+      z-index:0;
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      @include opacity(0.6);
+      @include transform(scale(1.01));
+      @include transition(all 1.2s $easeOutExpo);
+      will-change: transform;
+    }
+  }
+  .service-reveal{
+    z-index:0;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:60px;
+    .service-reveal_inner-text{
+      color:white;
+      h4{
+        z-index:0;
+        font-size:23px;
+        line-height:1.2;
+        letter-spacing:-0.25px;
+        margin-bottom:20px;
+        @include opacity(0);
+        @include transform(translateY(60px));
+        @include transition(all 0.6s $easeOutExpo);
+        will-change:transform;
+      }
+      p{
+        @include opacity(0);
+        @include transform(translateY(60px));
+        @include transition(all 0.9s $easeOutExpo);
+        will-change:transform;
+
+      }
+    }
+  }
+}
+
+.all-services{
+  margin-top:90px;
+  h5{
+    font-size:18px;
+    line-height:18px;
+    font-weight:700;
+    color:$primary;
+  }
+  .all-services_items{
+    ul{
+      list-style:none;
+      li{
+        font-size:20px;
+        line-height:1.4;
+        margin-bottom:10px;
+        &:last-child{
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:1440px){
+  .all-services{
+    .all-services_items{
+      ul{
+        li{
+          font-size:18px;
+          margin-bottom:8px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1280px){
+  .featured-services{
+    .col-1-2{
+      height:calc(50vh - 2.5vh);
+      max-height:360px;
+      min-height:360px;
+    }
+    .service-preview{
+      .service-preview_inner-text{
+        padding:40px;
+        h4{
+          font-size:25px;
+          letter-spacing:-0.25px;
+        }
+      }
+    }
+    .service-reveal{
+      padding:40px;
+      .service-reveal_inner-text{
+        h4{
+          font-size:20px;
+          letter-spacing:-0.15px;
+        }
+      }
+    }
+  }
+}

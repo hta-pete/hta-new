@@ -8,15 +8,16 @@ HTA MENU
   position:fixed;
   top:0;
   right:0;
-  background:$primary;
+  background:$blue_dark;
   width:100%;
   height:0;
   overflow-x:hidden;
   overflow-y:scroll;
+  will-change:transform;
   &.open{
     height:100vh;
     .hta-menu_close-btn{
-      @include opacity(0.6);
+      @include opacity(1);
       @include transform(scale(1));
     }
     .logo-form{
@@ -28,7 +29,7 @@ HTA MENU
     z-index:2;
     position:absolute;
     top:30px;
-    left:30px;
+    left:20px;
     @include opacity(0);
     @include transform(scale(0));
     @include transition(all 0.6s $easeOutExpo);
@@ -41,7 +42,7 @@ HTA MENU
     cursor:pointer;
     span{
       display:block;
-      color:white;
+      color:$secondary;
       font-size:60px;
       font-weight:300;
       @include transform(rotate(45deg));
@@ -60,6 +61,7 @@ HTA MENU
     left:0;
     height:100%;
     width:100%;
+    border-radius:10px
   }
   nav{
     display:none;
@@ -82,19 +84,16 @@ HTA MENU
     .nav-item{
       position:relative;
       display:block;
-      color:white;
       margin:10px 0;
       cursor:pointer;
       will-change:transform;
-      @include opacity(0);
-      @include transform(translateY(100px));
-      @include transition(color 0.6s $easeOutExpo);
     }
     h3{
-      font-size: min(max(30px, 4vw), 50px);
+      font-size: min(max(40px, 4vw), 60px);
       line-height:1.2;
       letter-spacing:min(max(0px, 4vw), -2px);
       margin-bottom:60px;
+      color:white;
     }
     p{
       font-size:20px;
@@ -131,13 +130,13 @@ form{
     width:100%;
     height:50px;
     padding:0 15px;
-    border:1px solid rgba(255,255,255,0.1);
-    background:rgba(255,255,255,0);
-    color:white;
+    border:1px solid transparent;
+    border-radius:6px;
+    background:white;
     font-size:18px;
     @include transition(border-color 0.8s $easeOutExpo);
     &:focus{
-      border-color:rgba(255,255,255,0.6);
+      border-color:$red;
       outline:none;
     }
   }
@@ -147,13 +146,13 @@ form{
     height:150px;
     resize:none;
     padding:15px;
-    border:1px solid rgba(255,255,255,0.1);
-    background:rgba(255,255,255,0);
-    color:white;
+    border:1px solid transparent;
+    border-radius:6px;
+    background:white;
     font-size:18px;
     @include transition(border-color 0.8s $easeOutExpo);
     &:focus{
-      border-color:rgba(255,255,255,0.6);
+      border-color:$red;
       outline:none;
     }
   }
@@ -167,11 +166,15 @@ form{
       background:$red;
       font-size:20px;
       font-weight:700;
+      letter-spacing:-0.75px;
       color:white;
       cursor:pointer;
       @include transition(background 0.8s $easeOutExpo);
       &:hover{
         background:darken($red, 5%);
+      }
+      &:focus{
+        outline:none;
       }
   }
   input, textarea{
@@ -203,7 +206,6 @@ form{
   height:100%;
   width:100%;
   color:white;
-  text-align:center;
   h2, h3{
     font-size: min(max(30px, 4vw), 50px);
     line-height:1.2;
