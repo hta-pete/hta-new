@@ -29,7 +29,7 @@ HTA MENU
     z-index:2;
     position:absolute;
     top:30px;
-    left:20px;
+    left:0;
     @include opacity(0);
     @include transform(scale(0));
     @include transition(all 0.6s $easeOutExpo);
@@ -38,7 +38,7 @@ HTA MENU
     z-index:2;
     position:absolute;
     top:15px;
-    right:30px;
+    right:0;
     cursor:pointer;
     span{
       display:block;
@@ -228,7 +228,16 @@ form{
   }
 }
 
-
+@media(max-width:1320px){
+  #hta-menu{
+    .logo-form{
+      left:20px;
+    }
+    .hta-menu_close-btn{
+      right:20px;
+    }
+  }
+}
 @media(max-width:600px){
   #hta-menu{
     &.open{

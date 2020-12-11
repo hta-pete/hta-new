@@ -1064,7 +1064,7 @@ HTA MENU
   z-index: 2;
   position: absolute;
   top: 30px;
-  left: 20px;
+  left: 0;
   opacity: 0;
   filter: alpha(opacity=0);
   -moz-transform: scale(0);
@@ -1082,7 +1082,7 @@ HTA MENU
   z-index: 2;
   position: absolute;
   top: 15px;
-  right: 30px;
+  right: 0;
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -1411,6 +1411,14 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   animation-delay: 1440ms;
 }
 
+@media (max-width: 1320px) {
+  #hta-menu .logo-form {
+    left: 20px;
+  }
+  #hta-menu .hta-menu_close-btn {
+    right: 20px;
+  }
+}
 @media (max-width: 600px) {
   #hta-menu.open {
     height: 100vh;
