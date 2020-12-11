@@ -615,7 +615,7 @@ WORK
   transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .work .work-slide_label h4 {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.6);
 }
