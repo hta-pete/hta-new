@@ -1007,6 +1007,16 @@ footer{
 }
 
 @media(max-width:480px){
+  header{
+    #nav{
+      li{
+        button.menu-btn{
+          width:auto;
+          padding:0 20px;
+        }
+      }
+    }
+  }
   .section-heading{
     h3{
       max-width:320px;
