@@ -1935,14 +1935,14 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
 }
 @media (max-width: 480px) {
   #home-hero {
-    height: calc(95vh - 60px);
+    height: calc(95vh - 75px);
   }
   #home-hero .flickity-viewport {
-    height: calc(95vh - 60px) !important;
+    height: calc(95vh - 75px) !important;
   }
   #home-hero .hero-copy {
     padding: 0;
-    margin-top: -40px;
+    margin-top: -20px;
   }
   #home-hero .hero-copy h1 {
     font-size: 35px;
