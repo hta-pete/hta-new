@@ -46,6 +46,10 @@ HTA MENU
       font-size:60px;
       font-weight:300;
       @include transform(rotate(45deg));
+      @include transition(color 0.8s $easeOutExpo);
+      &:hover{
+        color:white;
+      }
     }
     @include opacity(0);
     @include transform(scale(0));
@@ -129,14 +133,14 @@ form{
     display:block;
     width:100%;
     height:50px;
-    padding:0 15px;
-    border:1px solid transparent;
+    padding:0 20px;
+    border:none;
     border-radius:6px;
-    background:white;
+    background:#ddd;
     font-size:18px;
-    @include transition(border-color 0.8s $easeOutExpo);
+    @include transition(background 0.8s $easeOutExpo);
     &:focus{
-      border-color:$red;
+      background:white;
       outline:none;
     }
   }
@@ -145,14 +149,14 @@ form{
     width:100%;
     height:150px;
     resize:none;
-    padding:15px;
-    border:1px solid transparent;
+    padding:20px;
+    border:none;
     border-radius:6px;
-    background:white;
+    background:#ddd;
     font-size:18px;
-    @include transition(border-color 0.8s $easeOutExpo);
+    @include transition(background 0.8s $easeOutExpo);
     &:focus{
-      border-color:$red;
+      background:white;
       outline:none;
     }
   }
