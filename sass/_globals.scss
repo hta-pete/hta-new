@@ -296,7 +296,7 @@ html,body{
   font-family:"Roboto", sans-serif;
   color:$primary;
   background:white;
-  //min-width:1068px;
+  min-width:1068px;
   &.no-scroll{
     overflow:hidden;
   }

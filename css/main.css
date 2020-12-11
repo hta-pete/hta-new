@@ -324,6 +324,7 @@ html, body {
   font-family: "Roboto", sans-serif;
   color: #111;
   background: white;
+  min-width: 1068px;
 }
 html.no-scroll, body.no-scroll {
   overflow: hidden;
@@ -1333,16 +1334,16 @@ form input, form textarea {
   font-family: "Roboto";
 }
 form input ::-webkit-input-placeholder, form textarea ::-webkit-input-placeholder {
-  color: #888;
+  color: #444;
 }
 form input ::-moz-placeholder, form textarea ::-moz-placeholder {
-  color: #888;
+  color: #444;
 }
 form input :-ms-input-placeholder, form textarea :-ms-input-placeholder {
-  color: #888;
+  color: #444;
 }
 form input :-moz-placeholder, form textarea :-moz-placeholder {
-  color: #888;
+  color: #444;
 }
 
 #hta-thank-you {

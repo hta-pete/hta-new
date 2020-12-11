@@ -184,16 +184,16 @@ form{
   input, textarea{
     font-family:"Roboto";
     ::-webkit-input-placeholder { 
-      color:$secondary;
+      color:#444;
     }
     ::-moz-placeholder { 
-      color:$secondary;
+      color:#444;
     }
     :-ms-input-placeholder { 
-      color:$secondary;
+      color:#444;
     }
     :-moz-placeholder { 
-      color:$secondary;
+      color:#444;
     }
   }
 }
