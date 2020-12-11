@@ -119,9 +119,9 @@
 
 @media(max-width:600px){
   #home-hero{
-    
+    height:calc(100vh - 100px);
     .flickity-viewport{
-      
+      height:calc(100vh - 100px) !important;
     }
     .hero-copy{
       text-align:center;

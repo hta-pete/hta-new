@@ -1869,6 +1869,12 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   }
 }
 @media (max-width: 600px) {
+  #home-hero {
+    height: calc(100vh - 100px);
+  }
+  #home-hero .flickity-viewport {
+    height: calc(100vh - 100px) !important;
+  }
   #home-hero .hero-copy {
     text-align: center;
   }
