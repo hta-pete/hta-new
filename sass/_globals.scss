@@ -168,7 +168,7 @@ main{
 }
 section.section{
   position:relative;
-  padding:180px 20px;
+  padding:120px 20px;
   border-top:1px solid rgba(0,0,0,0.2);
   &:first-of-type{
     border-top:none;
@@ -561,11 +561,12 @@ WORK
     @include transition(all 0.8s $easeOutExpo);
     h4{
       font-size:17px;
-      color:white;
+      font-weight:500;
+      color:rgba(255,255,255,0.6);
     }
     &.light{
       h4{
-        color:$blue_dark;
+        color:rgba(0,0,0,0.6);
       }
     }
   }
