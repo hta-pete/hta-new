@@ -1803,7 +1803,7 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 #home-hero .flickity-viewport {
-  height: calc(100vh - 5vh) !important;
+  height: calc(95vh) !important;
 }
 
 .scroll-cue {
@@ -1869,22 +1869,57 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
     letter-spacing: -1.5px;
   }
 }
-@media (max-width: 600px) {
-  #home-hero {
-    height: calc(100vh - 100px);
-  }
-  #home-hero .flickity-viewport {
-    height: calc(100vh - 100px) !important;
-  }
+@media (max-width: 1024px) {
   #home-hero .hero-copy {
-    text-align: center;
+    padding: 0 20%;
+  }
+  #home-hero .hero-copy h1 {
+    font-size: 60px;
+    letter-spacing: -1.5px;
+  }
+}
+@media (max-width: 860px) {
+  #home-hero .hero-copy {
+    padding: 0 20%;
+  }
+  #home-hero .hero-copy h1 {
+    font-size: 50px;
+    letter-spacing: -1.5px;
+  }
+}
+@media (max-width: 700px) {
+  #home-hero .hero-copy {
+    padding: 0 15%;
+  }
+  #home-hero .hero-copy h1 {
+    font-size: 45px;
+    letter-spacing: -1.5px;
+  }
+}
+@media (max-width: 600px) {
+  #home-hero .hero-copy {
+    padding: 0 15%;
   }
   #home-hero .hero-copy h1 {
     font-size: 40px;
   }
+}
+@media (max-width: 480px) {
+  #home-hero {
+    height: calc(95vh - 60px);
+  }
+  #home-hero .flickity-viewport {
+    height: calc(95vh - 60px) !important;
+  }
+  #home-hero .hero-copy {
+    padding: 0;
+  }
+  #home-hero .hero-copy h1 {
+    font-size: 35px;
+  }
 
   .scroll-cue {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 /* –––––––––––––––––––––––––––––––––––––––
