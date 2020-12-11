@@ -293,7 +293,7 @@ h3 {
 h4 {
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: -0.25px;
+  letter-spacing: 0px;
 }
 
 p {
@@ -324,7 +324,6 @@ html, body {
   font-family: "Roboto", sans-serif;
   color: #111;
   background: white;
-  min-width: 1068px;
 }
 html.no-scroll, body.no-scroll {
   overflow: hidden;
@@ -340,7 +339,6 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  min-width: 1068px;
   height: 80px;
   background: white;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
@@ -620,6 +618,9 @@ WORK
   font-size: 17px;
   color: white;
 }
+.work .work-slide_label.light h4 {
+  color: #172638;
+}
 .work video, .work img {
   display: block;
   position: relative;
@@ -629,8 +630,6 @@ WORK
   height: 100%;
   object-fit: cover;
   will-change: transform;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
   -webkit-transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -868,6 +867,51 @@ footer .copyright span {
     bottom: 30px;
     left: 30px;
   }
+
+  .about.section .section-heading {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 1120px) {
+  section.section {
+    padding: 90px 20px;
+  }
+
+  .about.section .container-med {
+    max-width: 600px;
+  }
+  .about.section .section-heading h3 {
+    max-width: 400px;
+    margin-bottom: 40px;
+  }
+  .about.section .col-1-2 {
+    width: 100%;
+    float: none;
+  }
+  .about.section .col-1-2:first-child {
+    padding-right: 0;
+  }
+  .about.section .col-1-2:last-child {
+    margin-top: 0;
+  }
+
+  .process {
+    width: 420px;
+    height: 340px;
+    margin: 5px auto 40px auto;
+  }
+}
+@media (max-width: 800px) {
+  section.section {
+    padding: 60px 20px;
+  }
+
+  header #nav li {
+    display: none;
+  }
+  header #nav li:first-child, header #nav li:last-child {
+    display: block;
+  }
 }
 @media (max-width: 600px) {
   .container, .container-tiny, .container-small, .container-large, .container-form {
@@ -875,6 +919,7 @@ footer .copyright span {
   }
 
   h3 {
+    font-size: 30px;
     margin-bottom: 30px;
   }
 
@@ -883,53 +928,7 @@ footer .copyright span {
   }
 
   section {
-    padding: 60px 0;
-  }
-
-  header #nav {
-    display: none;
-  }
-  header #mobile-nav {
-    display: block;
-  }
-
-  .featured-services {
-    margin-top: 40px;
-  }
-  .featured-services.container-large {
-    padding: 0 7px;
-  }
-  .featured-services .featured-service h4 {
-    font-size: 30px;
-  }
-  .featured-services .featured-service .service-label {
-    top: 14px;
-    left: 10px;
-  }
-  .featured-services .featured-service .service-close-btn {
-    top: 0px;
-    right: 10px;
-  }
-  .featured-services .row {
-    margin-top: 0;
-  }
-  .featured-services .col-1-2 {
-    width: 100%;
-    float: none;
-    height: 350px;
-    max-height: 400px;
-    margin-top: 10px;
-  }
-  .featured-services .service-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-  }
-  .featured-services .service-info h5 {
-    margin-bottom: 15px;
+    padding: 0;
   }
 
   .all-services {
@@ -1870,12 +1869,6 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   }
 }
 @media (max-width: 600px) {
-  #home-hero {
-    height: calc(100vh - 120px);
-  }
-  #home-hero .flickity-viewport {
-    height: calc(100vh - 120px) !important;
-  }
   #home-hero .hero-copy {
     text-align: center;
   }
@@ -2146,6 +2139,10 @@ SERVICES
   }
 }
 @media (max-width: 1280px) {
+  .services .section-heading {
+    margin-bottom: 40px;
+  }
+
   .featured-services .col-1-2 {
     height: calc(50vh - 2.5vh);
     max-height: 360px;
@@ -2164,6 +2161,47 @@ SERVICES
   .featured-services .service-reveal .service-reveal_inner-text h4 {
     font-size: 20px;
     letter-spacing: -0.15px;
+  }
+}
+@media (max-width: 750px) {
+  .featured-services {
+    margin-top: 40px;
+  }
+  .featured-services .container {
+    padding: 0;
+  }
+  .featured-services .featured-service h4 {
+    font-size: 30px;
+  }
+  .featured-services .featured-service .service-label {
+    top: 14px;
+    left: 10px;
+  }
+  .featured-services .featured-service .service-close-btn {
+    top: 0px;
+    right: 10px;
+  }
+  .featured-services .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .featured-services .col-1-2 {
+    width: 100%;
+    float: none;
+    height: 400px;
+    max-height: 400px;
+    margin-top: 10px;
+  }
+  .featured-services .service-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+  .featured-services .service-info h5 {
+    margin-bottom: 15px;
   }
 }
 
