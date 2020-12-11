@@ -260,7 +260,7 @@ SERVICES
       float:none;
       height:400px;
       max-height:400px;
-      margin-top:10px;
+      margin-top:15px;
     }
     .service-info{
       position:absolute;
@@ -273,6 +273,9 @@ SERVICES
         margin-bottom:15px;
       }
     }
+  }
+  .all-services{
+    margin-top:50px;
   }
 
 }

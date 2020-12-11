@@ -174,7 +174,7 @@ HELPERS
 .container-small {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -812,7 +812,7 @@ footer .copyright span {
   }
 
   .container-small {
-    max-width: 800px;
+    max-width: 700px;
   }
 
   .container-tiny {
@@ -904,7 +904,7 @@ footer .copyright span {
 }
 @media (max-width: 800px) {
   section.section {
-    padding: 60px 20px;
+    padding: 60px 15px;
   }
 
   header #nav li {
@@ -915,8 +915,8 @@ footer .copyright span {
   }
 }
 @media (max-width: 600px) {
-  .container, .container-tiny, .container-small, .container-large, .container-form {
-    padding: 0 15px;
+  .container, .container-tiny, .container-small, .container-large, .container-med, .container-form {
+    padding: 0 0px;
   }
 
   h3 {
@@ -930,6 +930,10 @@ footer .copyright span {
 
   section {
     padding: 0;
+  }
+
+  .section-headng .section-label {
+    font-size: 14px;
   }
 
   .all-services {
@@ -994,17 +998,15 @@ footer .copyright span {
     width: 100%;
     margin-right: 0;
   }
-  .work .work-copy h3 {
-    text-align: center;
-  }
   .work .work-slider {
     width: 100%;
     background: #111;
     margin-top: 50px;
   }
   .work .work-slide_label {
-    font-size: 16px;
-    margin-top: 15px;
+    bottom: 15px;
+    left: 20px;
+    font-size: 14px;
   }
 
   footer {
@@ -1033,7 +1035,7 @@ footer .copyright span {
     margin-bottom: 10px;
   }
   footer li, footer span {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 3px;
   }
 }
@@ -2232,7 +2234,7 @@ SERVICES
     float: none;
     height: 400px;
     max-height: 400px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .featured-services .service-info {
     position: absolute;
@@ -2244,6 +2246,10 @@ SERVICES
   }
   .featured-services .service-info h5 {
     margin-bottom: 15px;
+  }
+
+  .all-services {
+    margin-top: 50px;
   }
 }
 
