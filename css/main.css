@@ -937,8 +937,6 @@ footer .copyright span {
   }
 
   .all-services {
-    display: flex;
-    justify-content: center;
     margin-top: 40px;
   }
   .all-services .all-services_items {
@@ -952,12 +950,24 @@ footer .copyright span {
     margin-bottom: 0;
   }
   .all-services .all-services_items ul li {
+    position: relative;
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 15px;
+    text-indent: 40px;
   }
   .all-services .all-services_items ul li:last-child {
     margin-bottom: 0;
+  }
+  .all-services .all-services_items ul li:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #888;
+    position: absolute;
+    left: 0;
+    top: 50%;
   }
 
   .team {
@@ -1014,10 +1024,12 @@ footer .copyright span {
     display: block;
     height: auto;
     color: white;
+    padding: 0 15px;
+  }
+  footer .center_content {
+    text-align: left;
   }
   footer .footer-wrap {
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin-top: 0;
     padding: 90px 0 120px 0;

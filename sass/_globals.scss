@@ -892,8 +892,6 @@ footer{
   }
   
   .all-services{
-    display:flex;
-    justify-content: center;
     margin-top:40px;
     .all-services_items{
       display:inline-block;
@@ -904,12 +902,23 @@ footer{
           margin-bottom:0;
         }
         li{
-          //text-align:center;
+          position:relative;
           font-size:18px;
           line-height:1.4;
           margin-bottom:15px;
+          text-indent:40px;
           &:last-child{
             margin-bottom:0;
+          }
+          &:before{
+            content:"";
+            display:block;
+            width:30px;
+            height:1px;
+            background:$secondary;
+            position:absolute;
+            left:0;
+            top:50%;
           }
         }
       }
@@ -970,10 +979,11 @@ footer{
     display:block;
      height:auto;
      color:white;
-     //text-align:center;
+     padding:0 15px;
+     .center_content{
+      text-align:left;
+     }
      .footer-wrap{
-      display:flex;
-      justify-content:center;
       width:100%;
       margin-top:0;
       padding:90px 0 120px 0;
