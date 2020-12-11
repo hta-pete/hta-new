@@ -163,6 +163,9 @@ HELPERS
   max-width:600px;
   margin:0 auto;
 }
+.text-group{
+  padding:0;
+}
 main{
   overflow-x:hidden;
 }
@@ -906,19 +909,8 @@ footer{
           font-size:18px;
           line-height:1.4;
           margin-bottom:15px;
-          text-indent:40px;
           &:last-child{
             margin-bottom:0;
-          }
-          &:before{
-            content:"";
-            display:block;
-            width:30px;
-            height:1px;
-            background:$secondary;
-            position:absolute;
-            left:0;
-            top:50%;
           }
         }
       }
@@ -1020,12 +1012,18 @@ footer{
       max-width:320px;
     }
   }
+  .logo-header{
+    margin-left:15px;
+  }
   .work{
     .section-heading{
       h3{
         max-width:250px;
       }
     }
+  }
+  .text-group{
+    padding:0 20px;
   }
 }
 
