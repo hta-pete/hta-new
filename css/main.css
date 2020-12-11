@@ -1942,12 +1942,14 @@ form input :-moz-placeholder, form textarea :-moz-placeholder {
   }
   #home-hero .hero-copy {
     padding: 0;
+    margin-top: -40px;
   }
   #home-hero .hero-copy h1 {
     font-size: 35px;
   }
 
   .scroll-cue {
+    padding-top: 60px;
     font-size: 15px;
   }
 }
