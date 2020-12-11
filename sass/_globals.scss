@@ -296,6 +296,7 @@ html,body{
   font-family:"Roboto", sans-serif;
   color:$primary;
   background:white;
+  //min-width:1068px;
   &.no-scroll{
     overflow:hidden;
   }
@@ -311,6 +312,7 @@ header{
   position:fixed;
   top:0px;
   width:100%;
+  min-width:1068px;
   height:80px;
   background:white;
   box-shadow:0 1px 6px 0 rgba(0,0,0,0.15);
@@ -714,6 +716,17 @@ footer{
    }
 }
 
+@media(max-width:1440px){
+
+  .container-large{
+    max-width:100%;
+  }
+  .logo-header{
+    margin-left:20px;
+  }
+  
+}
+
 @media(max-width:1320px){
   .container{
     max-width:1280px;
@@ -725,15 +738,17 @@ footer{
   section.section{
     padding:120px 20px;
   }
-  .logo-header{
-    margin-left:20px;
-  }
   footer{
+    h2{
+      font-size: 55px;
+      letter-spacing:-1px;
+    }
     li, span{
       font-size:18px;
       margin-bottom:8px;
     }
   }
+
 }
 @media(max-width:1280px){
   .container, .container-med{
