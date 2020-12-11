@@ -937,20 +937,21 @@ footer .copyright span {
   }
 
   .all-services {
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
   }
   .all-services .all-services_items {
-    display: block;
+    display: inline-block;
   }
   .all-services .all-services_items ul {
     list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .all-services .all-services_items ul:last-of-type {
     margin-bottom: 0;
   }
   .all-services .all-services_items ul li {
-    text-align: center;
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 15px;
@@ -1013,9 +1014,10 @@ footer .copyright span {
     display: block;
     height: auto;
     color: white;
-    text-align: center;
   }
   footer .footer-wrap {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 0;
     padding: 90px 0 120px 0;
@@ -1032,11 +1034,24 @@ footer .copyright span {
     margin-bottom: 40px;
   }
   footer h5 {
+    font-size: 14px;
     margin-bottom: 10px;
   }
   footer li, footer span {
-    font-size: 15px;
-    margin-bottom: 3px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  footer .copyright {
+    text-align: left;
+  }
+}
+@media (max-width: 480px) {
+  .section-heading h3 {
+    max-width: 320px;
+  }
+
+  .work .section-heading h3 {
+    max-width: 250px;
   }
 }
 /* ––––––––––––––––––––––––––––––––––––––––
@@ -2250,6 +2265,26 @@ SERVICES
 
   .all-services {
     margin-top: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .featured-services .col-1-2 {
+    max-height: 320px;
+    min-height: 320px;
+  }
+  .featured-services .service-preview .service-preview_inner-text {
+    padding: 30px 20px;
+  }
+  .featured-services .service-preview .service-preview_inner-text h4 {
+    font-size: 23px;
+    letter-spacing: -0.25px;
+  }
+  .featured-services .service-reveal {
+    padding: 20px;
+  }
+  .featured-services .service-reveal .service-reveal_inner-text h4 {
+    font-size: 18px;
+    letter-spacing: -0.15px;
   }
 }
 

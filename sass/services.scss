@@ -280,6 +280,33 @@ SERVICES
 
 }
 
+@media(max-width:480px){
+  .featured-services{
+    .col-1-2{
+      max-height:320px;
+      min-height:320px;
+    }
+    .service-preview{
+      .service-preview_inner-text{
+        padding:30px 20px;
+        h4{
+          font-size:23px;
+          letter-spacing:-0.25px;
+        }
+      }
+    }
+    .service-reveal{
+      padding:20px;
+      .service-reveal_inner-text{
+        h4{
+          font-size:18px;
+          letter-spacing:-0.15px;
+        }
+      }
+    }
+  }
+}
+
 
 
 
