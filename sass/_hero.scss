@@ -168,9 +168,9 @@
 
 @media(max-width:480px){
   #home-hero{
-    height:calc(95vh - 75px);
+    height:calc(95vh - 60px);
     .flickity-viewport{
-      height:calc(95vh - 75px) !important;
+      height:calc(95vh - 60px) !important;
     }
     .hero-copy{
       padding:0;

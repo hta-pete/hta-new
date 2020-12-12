@@ -482,36 +482,52 @@ ABOUT
 
 .process{
   position:relative;
-  width:420px;
-  height:340px;
-  margin:14px auto 0 auto;
+  width:100%;
+  max-width:480px;
+  margin:35px auto 0 auto;
   img{
     display:block;
     width:100%;
     height:auto;
     @include opacity(0.8);
   }
-  .process-thumb{
-    position:absolute;
-    background:$blue_dark;
-    &:nth-child(1){
-      top:0;
-      left:60px;
+  .process-col{
+    width:50%;
+    float:left;
+    margin:0;
+    &:first-child{
+      padding-right:20px;
+      .process-thumb{
+        background:$blue_dark;
+        overflow:hidden;
+        &:nth-child(1){
+          width:40%;
+          @include transform(translateX(150%));
+          margin-top:-20px;
+        }
+        &:nth-child(2){
+          margin-top:20px;
+          
+        }
+      }
     }
-    &:nth-child(2){
-      top:20px;
-      right:0;
+    &:last-child{
+      padding-right:0 !important;
+      .process-thumb{
+        background:$blue_dark;
+        overflow:hidden;
+        &:nth-child(1){
+          
+        }
+        &:nth-child(2){
+          width:50%;
+          @include transform(translateX(0));
+          margin-top:20px;
+        }
+      }
     }
-    &:nth-child(3){
-      bottom:60px;
-      left:-70px;
-    }
-    &:nth-child(4){
-      bottom:0;
-      right:100px;
-    }
-    
   }
+  
 }
 
 /* –––––––––––––––––––––––––––––––––––––––
@@ -789,6 +805,9 @@ footer{
       }
     }
   }
+  .process{
+    margin:35px auto 40px auto;
+  }
   .section-heading{
     margin-bottom:40px;
     &.dark{
@@ -850,11 +869,6 @@ footer{
         margin-top:0;
       }
     }
-  }
-  .process{
-    width:420px;
-    height:340px;
-    margin:5px auto 40px auto;
   }
 }
 
@@ -1006,7 +1020,7 @@ footer{
   }
 }
 
-@media(max-width:480px){
+@media(max-width:500px){
   p{
     font-size:17px;
     line-height:1.4;
@@ -1030,6 +1044,7 @@ footer{
     margin-left:15px;
   }
   .about.section{
+    padding-top:90px;
     .section-heading{
       border-bottom:none;
       margin-bottom:0;
@@ -1045,9 +1060,6 @@ footer{
         margin-top:0;
       }
     }
-  }
-  .process{
-    margin:5px auto 40px auto;
   }
   .work{
     .section-heading{
