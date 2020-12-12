@@ -1941,8 +1941,8 @@ form :-moz-placeholder {
     font-size: 35px;
   }
   #home-hero video, #home-hero img {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
   }
 
   .scroll-cue {
