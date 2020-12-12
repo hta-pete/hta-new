@@ -1375,16 +1375,16 @@ form button.btn-primary:focus {
   outline: none;
 }
 form ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 form ::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 form :-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 form :-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #hta-thank-you {
@@ -1514,6 +1514,7 @@ form :-moz-placeholder {
     padding: 0 15px;
   }
   form input, form textarea {
+    font-size: 15px;
     padding: 10px;
   }
   form button.btn-primary {
@@ -1938,6 +1939,10 @@ form :-moz-placeholder {
   }
   #home-hero .hero-copy h1 {
     font-size: 35px;
+  }
+  #home-hero video, #home-hero img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
   }
 
   .scroll-cue {

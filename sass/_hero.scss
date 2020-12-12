@@ -179,6 +179,9 @@
         font-size:35px;
       }
     }
+    video, img{
+      @include opacity(0.4);
+    }
   }
   .scroll-cue{
     padding-top:60px;
