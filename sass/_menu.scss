@@ -118,7 +118,7 @@ HTA MENU
 
 
 form{
-  margin-top:40px;
+  
   .field, .fields{
     margin-top:2%;
   }
@@ -131,20 +131,21 @@ form{
   }
   input, textarea, button{
     font-family:"Roboto", sans-serif;
+    color:white;
   }
   input{
     display:block;
     width:100%;
     height:50px;
     padding:0 20px;
-    border:none;
-    border-radius:6px;
-    background:#ddd;
+    border-radius:3px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:transparent;
     font-size:18px;
     -webkit-appearance:none;
-    @include transition(background 0.8s $easeOutExpo);
+    @include transition(border-color 0.8s $easeOutExpo);
     &:focus{
-      background:white;
+      border-color:rgba(255,255,255,1);
       outline:none;
     }
   }
@@ -154,14 +155,14 @@ form{
     height:150px;
     resize:none;
     padding:20px;
-    border:none;
-    border-radius:6px;
-    background:#ddd;
+    border-radius:3px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:transparent;
     font-size:18px;
     -webkit-appearance:none;
-    @include transition(background 0.8s $easeOutExpo);
+    @include transition(border-color 0.8s $easeOutExpo);
     &:focus{
-      background:white;
+      border-color:rgba(255,255,255,1);
       outline:none;
     }
   }
@@ -188,16 +189,16 @@ form{
       }
   }
   ::-webkit-input-placeholder { 
-    color:#444;
+    color:rgba(255,255,255,0.6);
   }
   ::-moz-placeholder { 
-    color:#444;
+    color:rgba(255,255,255,0.6);
   }
   :-ms-input-placeholder { 
-    color:#444;
+    color:rgba(255,255,255,0.6);
   }
   :-moz-placeholder { 
-    color:#444;
+    color:rgba(255,255,255,0.6);
   }
 }
 
@@ -276,37 +277,12 @@ form{
     }
   }
   form{
-    margin-top:40px;
     padding:0 15px;
-    .field, .fields{
-      margin-top:2%;
-    }
-    .col-1-2{
-      width:49%;
-      margin-right:2%;
-      &:last-child{
-        margin-right:0;
-      }
-    }
-    input{
-      height:40px;
-      font-size:16px;
-      border:1px solid rgba(255,255,255,0.2);
-    }
-    textarea{
-      font-size:16px;
-      border:1px solid rgba(255,255,255,0.2);
-    }
     input, textarea{
       padding:10px;
     }
     button.btn-primary{
-      height:40px;
-      padding:0 20px;
-      margin-top:20px;
-      border:none;
-      background:$red;
-      font-size:18px;
+      margin-top:15px;
     }
   }
 }

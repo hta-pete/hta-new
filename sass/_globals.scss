@@ -1007,6 +1007,10 @@ footer{
 }
 
 @media(max-width:480px){
+  p{
+    font-size:17px;
+    line-height:1.4;
+  }
   header{
     #nav{
       li{
