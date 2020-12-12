@@ -279,7 +279,7 @@ TYPOGRAPHY
 
 ––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, strong {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
@@ -291,7 +291,7 @@ h2 {
 h3 {
   font-size: 55px;
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 h4 {
@@ -1782,7 +1782,7 @@ form :-moz-placeholder {
 }
 #home-hero .hero-copy h1 {
   font-size: 95px;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -2.5px;
 }
 #home-hero .hero-slider {
