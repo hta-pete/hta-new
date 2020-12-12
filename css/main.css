@@ -1130,6 +1130,89 @@ footer .copyright span {
   .text-group {
     padding: 0 20px;
   }
+
+  .our-story .section-heading {
+    margin-bottom: 60px;
+  }
+  .our-story .col-1-2:first-child {
+    padding-right: 30px;
+  }
+  .our-story .history-group {
+    position: relative;
+    margin-bottom: 60px;
+  }
+  .our-story .history-group .thumb {
+    z-index: 0;
+    position: relative;
+    margin-right: 5px;
+  }
+  .our-story .history-group .thumb:nth-child(1) {
+    margin-top: -20px;
+  }
+  .our-story .history-group .thumb:nth-child(2) {
+    z-index: 2;
+    width: 10%;
+    position: absolute;
+    bottom: 10%;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 20%;
+  }
+  .our-story .history-group .thumb:nth-child(4) {
+    z-index: 2;
+    width: 15%;
+    position: absolute;
+    bottom: -7px;
+    right: 17%;
+  }
+  .our-story .history-group .thumb:nth-child(5) {
+    margin-top: -20px;
+  }
+  .our-story .history-group .thumb:nth-child(6) {
+    margin-top: 7%;
+    margin-right: 0;
+  }
+  .our-story .history-group .thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .our-story .history-group .history-timeline {
+    z-index: 4;
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .our-story .history-group .history-timeline .beginning {
+    position: absolute;
+    left: -45px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+  }
+  .our-story .history-group .history-timeline .end {
+    position: absolute;
+    right: -45px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+  }
+  .our-story .history-group .history-timeline .time-markers {
+    width: 100%;
+  }
+  .our-story .history-group .history-timeline .time-markers span {
+    display: block;
+    width: 1px;
+    height: 9px;
+    background: #aaa;
+  }
 }
 /* ––––––––––––––––––––––––––––––––––––––––
 
