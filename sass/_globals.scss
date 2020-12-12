@@ -1065,7 +1065,7 @@ footer{
     margin:20px auto 40px auto;
     .process-col{
       &:first-child{
-        padding-right:15px;
+        padding-right:10px;
         .process-thumb{
           &:nth-child(1){
             width:60%;
@@ -1073,14 +1073,14 @@ footer{
             margin-top:-15px;
           }
           &:nth-child(2){
-            margin-top:15px;
+            margin-top:10px;
           }
         }
       }
       &:last-child{
         .process-thumb{
           &:nth-child(2){
-            margin-top:15px;
+            margin-top:10px;
           }
         }
       }
@@ -1106,35 +1106,36 @@ footer{
       }
     }
     .history-group{
-      position:relative;
-      margin-bottom:60px;
+      margin-bottom:80px;
       .thumb{
-        z-index:0;
-        position:relative;
-        margin-right:5px;
+        margin-right:10px;
         &:nth-child(1){ 
           margin-top:-20px; 
+          width:60%;
         }
         &:nth-child(2){
           z-index:2; 
-          width:10%;
+          width:20%;
           position:absolute;
-          bottom:10%;
+          bottom:-62%;
           @include transform(translateY(-50%));
-          left:20%; 
+          left:28%; 
         }
-        &:nth-child(3){}
+        &:nth-child(3){
+          width:75%;
+        }
         &:nth-child(4){
           z-index:2; 
-          width:15%;
+          width:18%;
           position:absolute;
-          bottom:-7px;
-          right:17%;  
+          bottom:7%;
+          right:-10px;  
         }
-        &:nth-child(5){ margin-top:-20px; }
+        &:nth-child(5){ margin-top:-20px; display:none; }
         &:nth-child(6){ 
-          margin-top:7%;
+          margin-top:-20px;
           margin-right:0;
+          width:20%;
         }
         img{
           display:block;
@@ -1143,35 +1144,10 @@ footer{
         }
       }
       .history-timeline{
-        z-index:4;
-        position:absolute;
-        bottom:10px;
-        width:80%;
-        left:50%;
-        margin-left:-40%;
-        height:1px;
-        background:rgba(0,0,0,0.3);
-        .beginning{
-          position:absolute;
-          left:-45px;
-          font-size:14px;
-          font-weight:500;
-          color:$secondary;
-        }
-        .end{
-          position:absolute;
-          right:-45px;
-          font-size:14px;
-          font-weight:500;
-          color:$secondary;
-        }
+        bottom:-15px;
         .time-markers{
-          width:100%;
           span{
-            display:block;
-            width:1px;
             height:9px;
-            background:#aaa;
           }
         }
       }

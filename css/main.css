@@ -1109,7 +1109,7 @@ footer .copyright span {
     margin: 20px auto 40px auto;
   }
   .process .process-col:first-child {
-    padding-right: 15px;
+    padding-right: 10px;
   }
   .process .process-col:first-child .process-thumb:nth-child(1) {
     width: 60%;
@@ -1117,10 +1117,10 @@ footer .copyright span {
     margin-top: -15px;
   }
   .process .process-col:first-child .process-thumb:nth-child(2) {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .process .process-col:last-child .process-thumb:nth-child(2) {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .work .section-heading h3 {
@@ -1138,42 +1138,45 @@ footer .copyright span {
     padding-right: 30px;
   }
   .our-story .history-group {
-    position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   .our-story .history-group .thumb {
-    z-index: 0;
-    position: relative;
-    margin-right: 5px;
+    margin-right: 10px;
   }
   .our-story .history-group .thumb:nth-child(1) {
     margin-top: -20px;
+    width: 60%;
   }
   .our-story .history-group .thumb:nth-child(2) {
     z-index: 2;
-    width: 10%;
+    width: 20%;
     position: absolute;
-    bottom: 10%;
+    bottom: -62%;
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: 20%;
+    left: 28%;
+  }
+  .our-story .history-group .thumb:nth-child(3) {
+    width: 75%;
   }
   .our-story .history-group .thumb:nth-child(4) {
     z-index: 2;
-    width: 15%;
+    width: 18%;
     position: absolute;
-    bottom: -7px;
-    right: 17%;
+    bottom: 7%;
+    right: -10px;
   }
   .our-story .history-group .thumb:nth-child(5) {
     margin-top: -20px;
+    display: none;
   }
   .our-story .history-group .thumb:nth-child(6) {
-    margin-top: 7%;
+    margin-top: -20px;
     margin-right: 0;
+    width: 20%;
   }
   .our-story .history-group .thumb img {
     display: block;
@@ -1181,37 +1184,10 @@ footer .copyright span {
     height: auto;
   }
   .our-story .history-group .history-timeline {
-    z-index: 4;
-    position: absolute;
-    bottom: 10px;
-    width: 80%;
-    left: 50%;
-    margin-left: -40%;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  .our-story .history-group .history-timeline .beginning {
-    position: absolute;
-    left: -45px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #888;
-  }
-  .our-story .history-group .history-timeline .end {
-    position: absolute;
-    right: -45px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #888;
-  }
-  .our-story .history-group .history-timeline .time-markers {
-    width: 100%;
+    bottom: -15px;
   }
   .our-story .history-group .history-timeline .time-markers span {
-    display: block;
-    width: 1px;
     height: 9px;
-    background: #aaa;
   }
 }
 /* ––––––––––––––––––––––––––––––––––––––––
