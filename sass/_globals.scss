@@ -299,7 +299,6 @@ html,body{
   font-family:"Roboto", sans-serif;
   color:$primary;
   background:white;
-  //min-width:1068px;
   &.no-scroll{
     overflow:hidden;
   }
@@ -315,7 +314,6 @@ header{
   position:fixed;
   top:0px;
   width:100%;
-  //min-width:1068px;
   height:80px;
   background:white;
   box-shadow:0 1px 6px 0 rgba(0,0,0,0.15);
@@ -433,7 +431,6 @@ header{
   }
 }
 
-
 button.menu-btn_tiny{
   margin-right:0;
   cursor:pointer;
@@ -517,9 +514,6 @@ ABOUT
       .process-thumb{
         background:$blue_dark;
         overflow:hidden;
-        &:nth-child(1){
-          
-        }
         &:nth-child(2){
           width:60%;
           @include transform(translateX(0));
@@ -598,7 +592,6 @@ WORK
     height:100%;
     object-fit: cover;
     will-change: transform;
-    //@include opacity(0.9);
     @include transition(transform 2s $easeOutExpo);
   }
 }
@@ -703,9 +696,6 @@ footer{
    .footer-wrap{
     width:100%;
     margin-top:60px;
-   }
-   .footer-nav{
-    
    }
    a{
     color:white;
