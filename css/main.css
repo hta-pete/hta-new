@@ -1249,8 +1249,15 @@ HTA MENU
 #hta-menu .hta-menu_close-btn {
   z-index: 2;
   position: absolute;
-  top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
   right: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -1264,11 +1271,12 @@ HTA MENU
   -ms-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform, opacity;
 }
 #hta-menu .hta-menu_close-btn span {
   display: block;
-  color: #888;
-  font-size: 60px;
+  color: white;
+  font-size: 40px;
   font-weight: 300;
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -1281,8 +1289,8 @@ HTA MENU
   -o-transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
-#hta-menu .hta-menu_close-btn span:hover {
-  color: white;
+#hta-menu .hta-menu_close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 #hta-menu .nav-wrap {
   z-index: 0;
@@ -1605,8 +1613,13 @@ form :-moz-placeholder {
     display: none;
   }
   #hta-menu .hta-menu_close-btn {
-    top: 5px;
+    top: 10px;
     right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+  #hta-menu .hta-menu_close-btn span {
+    font-size: 30px;
   }
   #hta-menu .nav-wrap {
     display: flex;
@@ -2124,8 +2137,15 @@ SERVICES
 .featured-services .featured-service .service-close-btn {
   z-index: 2;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -2139,11 +2159,12 @@ SERVICES
   -ms-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform, opacity;
 }
 .featured-services .featured-service .service-close-btn span {
   display: inline-block;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 300;
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -2155,6 +2176,9 @@ SERVICES
   -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.featured-services .featured-service .service-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 .featured-services .featured-service.active .service-close-btn {
   -moz-transform: scale(1);
@@ -2361,7 +2385,7 @@ SERVICES
     left: 10px;
   }
   .featured-services .featured-service .service-close-btn {
-    top: 0px;
+    top: 10px;
     right: 10px;
   }
   .featured-services .row {

@@ -48,13 +48,20 @@ SERVICES
     .service-close-btn{
       z-index:2;
       position:absolute;
-      top:10px;
-      right:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center; 
+      top:15px;
+      right:15px;
+      width:36px;
+      height:36px;
+      border-radius:100%;
+      background:rgba(255,255,255,0.1);
       cursor:pointer;
       span{
         display:inline-block;
         color:white;
-        font-size:40px;
+        font-size:30px;
         font-weight:300;
         @include transform(rotate(45deg));
         @include transition(color 0.6s $easeOutExpo);
@@ -62,6 +69,10 @@ SERVICES
       @include opacity(0);
       @include transform(scale(0));
       @include transition(all 0.6s $easeOutExpo);
+      will-change: transform, opacity;
+      &:hover{
+        background:rgba(255,255,255,0.15);
+      }
     }
     &.active{
       .service-close-btn{
@@ -247,7 +258,7 @@ SERVICES
         left:10px;
       }
       .service-close-btn{
-        top:0px;
+        top:10px;
         right:10px;
       }
     }
