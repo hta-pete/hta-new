@@ -201,7 +201,7 @@ section.section-group{
 .section-heading{
   margin-bottom:60px;
   h2, h3{
-    color:$blue;
+    color:$primary;
   }
   &.dark{
     .section-label{
@@ -699,6 +699,19 @@ footer{
    }
    a{
     color:white;
+    i{
+      font-size:12px;
+      margin-left:3px;
+      @include transition(transform 0.4s $easeOutExpo); 
+    }
+    &:hover{
+      i{
+        @include transform(translateX(4px));
+      }
+    }
+   }
+   .menu-btn{
+    cursor:pointer;
    }
    h2{
     font-size: 70px;
@@ -727,6 +740,10 @@ footer{
     span{
       font-size:14px;
       color:$secondary;
+    }
+    a{
+      color:$secondary;
+      text-decoration:underline;
     }
    }
 }

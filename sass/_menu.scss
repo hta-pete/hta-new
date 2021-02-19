@@ -100,15 +100,19 @@ HTA MENU
       cursor:pointer;
       will-change:transform;
     }
+    .hta-form-heading{
+      margin-bottom:60px;
+    }
     h3{
       font-size: min(max(40px, 4vw), 60px);
       line-height:1.2;
       letter-spacing:min(max(0px, 4vw), -2px);
-      margin-bottom:60px;
+      margin-bottom:20px;
       color:white;
     }
     p{
-      font-size:20px;
+      color:white;
+      font-size:18px;
     }
   }
 }
