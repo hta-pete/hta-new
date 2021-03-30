@@ -14,8 +14,7 @@
     h1{
       font-size: 95px;
       line-height:1.1;
-      //line-height:1.2;
-      letter-spacing:-2.5px;
+      letter-spacing:-3px;
     }
   }
   .hero-slider{
@@ -86,8 +85,6 @@
     }
   }
 }
-
-
 @media(max-width:1600px){
   #home-hero{
     .hero-copy{
@@ -127,7 +124,6 @@
       }
     }
   }
-
 }
 
 @media(max-width:860px){
@@ -140,7 +136,6 @@
       }
     }
   }
-
 }
 @media(max-width:700px){
   #home-hero{
@@ -152,7 +147,6 @@
       }
     }
   }
-
 }
 
 @media(max-width:600px){

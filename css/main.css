@@ -228,7 +228,7 @@ section.section-group p:last-child {
   margin-bottom: 60px;
 }
 .section-heading h2, .section-heading h3 {
-  color: #222;
+  color: #172638;
 }
 .section-heading.dark .section-label {
   color: rgba(255, 255, 255, 0.4);
@@ -279,7 +279,7 @@ TYPOGRAPHY
 
 ––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 h2 {
@@ -326,7 +326,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "Roboto", sans-serif;
-  color: #222;
+  color: #172638;
   background: white;
 }
 html.no-scroll, body.no-scroll {
@@ -388,7 +388,7 @@ header #nav li:last-child {
   margin-right: 0;
 }
 header #nav li a {
-  color: #222;
+  color: #172638;
   -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -452,12 +452,12 @@ header #mobile-nav li {
   font-size: 18px;
   line-height: 80px;
   font-weight: 500;
-  color: #222;
+  color: #172638;
   letter-spacing: -0.25px;
   cursor: pointer;
 }
 header #mobile-nav li a {
-  color: #222;
+  color: #172638;
   -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -581,7 +581,8 @@ WORK
 .work {
   position: relative;
   width: 100%;
-  background: #222;
+  height: calc(100vh);
+  background: #172638;
   color: white;
   border-color: rgba(255, 255, 255, 0.1);
 }
@@ -594,7 +595,7 @@ WORK
 }
 .work .work-slider {
   width: 65%;
-  background: #222;
+  background: #172638;
 }
 .work .work-slider .work-slide {
   position: absolute;
@@ -749,6 +750,39 @@ OUR STORY
   width: 1px;
   height: 11px;
   background: #aaa;
+}
+
+/* –––––––––––––––––––––––––––––––––––––––
+
+PRIVACY
+
+–––––––––––––––––––––––––––––––––––––––– */
+.privacy.section {
+  padding-top: 160px;
+}
+.privacy.section .col-1-2:first-child {
+  padding-right: 30px;
+}
+.privacy.section .col-1-2:last-child {
+  margin-top: 5px;
+}
+.privacy.section p {
+  margin-top: 30px;
+}
+.privacy.section p:first-child {
+  margin-top: 0;
+}
+.privacy.section ul {
+  margin-top: 30px;
+}
+.privacy.section ul li {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.privacy.section ul li:last-child {
+  margin-bottom: 0;
 }
 
 /* –––––––––––––––––––––––––––––––––––––––
@@ -930,21 +964,21 @@ footer .copyright a {
     padding: 90px 20px;
   }
 
-  .about.section .container-med {
+  .about.section .container-med, .privacy.section .container-med {
     max-width: 600px;
   }
-  .about.section .section-heading h3 {
+  .about.section .section-heading h3, .privacy.section .section-heading h3 {
     max-width: 400px;
     margin-bottom: 40px;
   }
-  .about.section .col-1-2 {
+  .about.section .col-1-2, .privacy.section .col-1-2 {
     width: 100%;
     float: none;
   }
-  .about.section .col-1-2:first-child {
+  .about.section .col-1-2:first-child, .privacy.section .col-1-2:first-child {
     padding-right: 0;
   }
-  .about.section .col-1-2:last-child {
+  .about.section .col-1-2:last-child, .privacy.section .col-1-2:last-child {
     margin-top: 0;
   }
 }
@@ -957,7 +991,7 @@ footer .copyright a {
     display: none;
   }
   header #nav li:first-child, header #nav li:last-child {
-    display: block;
+    display: inline-block;
   }
 }
 @media (max-width: 600px) {
@@ -1030,7 +1064,7 @@ footer .copyright a {
 
   .work {
     height: auto;
-    background: #222;
+    background: #172638;
     color: white;
     border-color: rgba(255, 255, 255, 0.1);
   }
@@ -1046,7 +1080,7 @@ footer .copyright a {
   }
   .work .work-slider {
     width: 100%;
-    background: #222;
+    background: #172638;
     margin-top: 50px;
   }
   .work .work-slide_label {
@@ -1093,7 +1127,7 @@ footer .copyright a {
   }
 }
 @media (max-width: 500px) {
-  p {
+  p, li {
     font-size: 17px;
     line-height: 1.4;
   }
@@ -1111,20 +1145,20 @@ footer .copyright a {
     margin-left: 15px;
   }
 
-  .about.section {
+  .about.section, .privacy.section {
     padding-top: 90px;
   }
-  .about.section .section-heading {
+  .about.section .section-heading, .privacy.section .section-heading {
     border-bottom: none;
     margin-bottom: 0;
   }
-  .about.section .section-heading h3 {
+  .about.section .section-heading h3, .privacy.section .section-heading h3 {
     margin-bottom: 40px;
   }
-  .about.section .col-1-2:first-child {
+  .about.section .col-1-2:first-child, .privacy.section .col-1-2:first-child {
     padding-right: 0;
   }
-  .about.section .col-1-2:last-child {
+  .about.section .col-1-2:last-child, .privacy.section .col-1-2:last-child {
     margin-top: 0;
   }
 
@@ -1694,7 +1728,7 @@ form :-moz-placeholder {
   width: 100%;
   height: 100%;
   float: left;
-  background: #222;
+  background: #172638;
   overflow: hidden;
 }
 .slide.slide-active .hero-copy p, .slide.slide-active .hero-copy h2, .slide.slide-active .hero-copy .btn-play {
@@ -1937,7 +1971,7 @@ form :-moz-placeholder {
 #home-hero .hero-copy h1 {
   font-size: 95px;
   line-height: 1.1;
-  letter-spacing: -2.5px;
+  letter-spacing: -3px;
 }
 #home-hero .hero-slider {
   position: absolute;
@@ -2352,7 +2386,7 @@ SERVICES
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: #222;
+  color: #172638;
 }
 .all-services .all-services_items ul {
   list-style: none;
@@ -2451,6 +2485,17 @@ SERVICES
 
   .all-services {
     margin-top: 50px;
+  }
+
+  .google-partner {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding-top: 60px;
+    margin-top: 60px;
+  }
+  .google-partner img {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 480px) {
