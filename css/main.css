@@ -1000,8 +1000,8 @@ footer .copyright a {
   }
 
   h3 {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 25px;
+    margin-bottom: 25px;
   }
 
   p {
@@ -2135,7 +2135,7 @@ form :-moz-placeholder {
     margin-top: -10px;
   }
   #home-hero .hero-copy h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   #home-hero video, #home-hero img {
     opacity: 0.5;
@@ -2514,7 +2514,7 @@ SERVICES
     padding: 30px 20px;
   }
   .featured-services .service-preview .service-preview_inner-text h4 {
-    font-size: 23px;
+    font-size: 22px;
     letter-spacing: -0.25px;
   }
   .featured-services .service-reveal {
