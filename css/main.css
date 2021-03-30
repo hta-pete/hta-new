@@ -2497,11 +2497,8 @@ SERVICES
     margin-top: 50px;
   }
 
-  .google-partner {
+  .google-partner .container-small.flex-v {
     display: block;
-    border-top: 1px solid #ddd;
-    padding-top: 60px;
-    margin-top: 60px;
   }
   .google-partner img {
     margin-right: 0;
