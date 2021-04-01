@@ -832,7 +832,7 @@ footer h2 {
 footer h5 {
   text-transform: uppercase;
   font-size: 14px;
-  color: #888;
+  color: rgba(255, 255, 255, 0.4);
   margin-bottom: 20px;
   font-weight: 500;
 }
@@ -849,11 +849,19 @@ footer .copyright {
 }
 footer .copyright span {
   font-size: 14px;
-  color: #888;
+  color: rgba(255, 255, 255, 0.4);
 }
 footer .copyright a {
-  color: #888;
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: underline;
+  -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+footer .copyright a:hover {
+  color: white;
 }
 
 @media (max-width: 1440px) {
