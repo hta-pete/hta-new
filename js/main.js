@@ -97,7 +97,8 @@ if(typeof(elem) != 'undefined' && elem != null){
     draggable: false,
     prevNextButtons: false,
     pageDots: false,
-    wrapAround: true
+    wrapAround: true,
+    imagesLoaded: true
   });
 }
 var elem2 = document.querySelector('.work-slider');
@@ -110,7 +111,8 @@ if(typeof(elem2) != 'undefined' && elem2 != null){
     draggable: false,
     prevNextButtons: false,
     pageDots: false,
-    wrapAround: true
+    wrapAround: true,
+    imagesLoaded: true
   });
 }
 
