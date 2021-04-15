@@ -793,12 +793,12 @@ FOOTER
 footer {
   position: relative;
   height: 100vh;
+  min-height: 960px;
   background-color: #172638;
   color: white;
 }
 footer .footer-wrap {
   width: 100%;
-  margin-top: 60px;
 }
 footer a {
   color: white;
@@ -826,8 +826,8 @@ footer h2 {
   font-size: 70px;
   line-height: 1.2;
   letter-spacing: min(max(0px, 4vw), -2px);
-  margin-bottom: 60px;
   color: white;
+  margin-bottom: 60px;
 }
 footer h5 {
   text-transform: uppercase;
@@ -846,6 +846,10 @@ footer .copyright {
   position: absolute;
   width: 100%;
   bottom: 30px;
+}
+footer .copyright img {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 footer .copyright span {
   font-size: 14px;
@@ -1002,7 +1006,7 @@ footer .copyright a:hover {
     display: inline-block;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container, .container-tiny, .container-small, .container-large, .container-med, .container-form {
     padding: 0 0px;
   }
@@ -1022,29 +1026,6 @@ footer .copyright a:hover {
 
   .section-headng .section-label {
     font-size: 14px;
-  }
-
-  .all-services {
-    margin-top: 40px;
-  }
-  .all-services .all-services_items {
-    display: inline-block;
-  }
-  .all-services .all-services_items ul {
-    list-style: none;
-    margin-bottom: 10px;
-  }
-  .all-services .all-services_items ul:last-of-type {
-    margin-bottom: 0;
-  }
-  .all-services .all-services_items ul li {
-    position: relative;
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-  .all-services .all-services_items ul li:last-child {
-    margin-bottom: 0;
   }
 
   .team {
@@ -1100,6 +1081,7 @@ footer .copyright a:hover {
   footer {
     display: block;
     height: auto;
+    min-height: auto;
     color: white;
     padding: 0 15px;
   }
@@ -1108,8 +1090,7 @@ footer .copyright a:hover {
   }
   footer .footer-wrap {
     width: 100%;
-    margin-top: 0;
-    padding: 90px 0 120px 0;
+    padding: 90px 0;
   }
   footer .footer-nav {
     display: block;
@@ -1131,6 +1112,9 @@ footer .copyright a:hover {
     margin-bottom: 5px;
   }
   footer .copyright {
+    position: relative;
+    bottom: 0;
+    margin-top: 60px;
     text-align: left;
   }
 }
@@ -1186,6 +1170,29 @@ footer .copyright a:hover {
   }
   .process .process-col:last-child .process-thumb:nth-child(2) {
     margin-top: 10px;
+  }
+
+  .all-services {
+    margin-top: 40px;
+  }
+  .all-services .all-services_items {
+    display: inline-block;
+  }
+  .all-services .all-services_items ul {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .all-services .all-services_items ul:last-of-type {
+    margin-bottom: 0;
+  }
+  .all-services .all-services_items ul li {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  .all-services .all-services_items ul li:last-child {
+    margin-bottom: 0;
   }
 
   .work .section-heading h3 {

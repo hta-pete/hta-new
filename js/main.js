@@ -1,3 +1,6 @@
+// —————————
+// Variables
+// —————————
 var homeHero      = document.getElementById("home-hero"),
     header        = document.getElementById("header"),
     nav           = document.getElementById("nav"),
@@ -10,11 +13,17 @@ var homeHero      = document.getElementById("home-hero"),
     scroll_cue    = document.querySelector(".scroll-cue"),
     section       = document.getElementsByClassName("section"),
     service       = document.querySelectorAll('.featured-service');
-
-var lastScrollTop = 0;
-
+// —————————
+// Load Stuff
+// —————————
+function loadStuff(){
+  checkSectionOffset();
+}
+window.addEventListener("load", loadStuff);
+// —————————
+// Scroll Stuff
+// —————————
 function scrollStuff(){
-
   if(typeof(flkty) != 'undefined' && flkty != null){
     if( window.scrollY > window.outerHeight/4 ){
       flkty.player.stop();
@@ -22,7 +31,6 @@ function scrollStuff(){
       flkty.player.play();
     }
   }
-
   if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
     if( window.scrollY > 0 ){
       scroll_cue.classList.add("active");
@@ -30,11 +38,23 @@ function scrollStuff(){
       scroll_cue.classList.remove("active");
     }
   }
-
   checkSectionOffset();
-
 }
-
+window.addEventListener("scroll", _.throttle(scrollStuff, 200));
+// —————————
+// Resize Stuff
+// —————————
+function resizeStuff(){
+  if(typeof(elem) != 'undefined' && elem != null){
+    flkty.resize();
+    flkty2.resize();
+  }
+  checkSectionOffset();
+}
+window.addEventListener("resize", resizeStuff);
+// —————————
+// Check Section Offsets
+// —————————
 function checkSectionOffset(){
   for (var i = 0; i < section.length; i++) {
     if ( section[i].offsetTop - window.scrollY <= 80 ){
@@ -46,8 +66,9 @@ function checkSectionOffset(){
     }
   }
 }
-
+// —————————
 // Navigation Links
+// —————————
 for (var i = 0; i < nav_link.length; i++) {
   nav_link[i].addEventListener("click", function(e){
     e.preventDefault();
@@ -63,30 +84,9 @@ function activeLinks(elem){
       elem.classList.add("active");
   }
 }
-
-
-function toggleMenu(){
-
-  htaMenu.classList.toggle("open");
-  menu.classList.toggle("active");
-  this.classList.toggle("active");
-  header.classList.toggle("hide");
-  document.body.classList.add("no-scroll");
-}
-
-function closeMenu(){
-
-  htaMenu.classList.remove("open");
-  menu.classList.remove("active");
-  header.classList.remove("hide");
-  document.body.classList.remove("no-scroll");
-  hta_form.style.display = "flex";
-  hta_thank_you.classList.remove("active");
-  form.reset();
-  checkSectionOffset();
-
-}
-
+// —————————
+// Sliders
+// —————————
 var elem = document.querySelector('.hero-slider');
 if(typeof(elem) != 'undefined' && elem != null){
   var slides = elem.querySelectorAll(".hero-slide");
@@ -115,10 +115,9 @@ if(typeof(elem2) != 'undefined' && elem2 != null){
     imagesLoaded: true
   });
 }
-
-
-
+// —————————
 // Featured Services
+// —————————
 for (var i = 0; i < service.length; i++) {
   service[i].addEventListener("click", function(e){
     activeService(this);
@@ -132,14 +131,42 @@ function activeService(elem){
     }
   }
 }
-
+// —————————
+// Open Contact Form
+// —————————
+function openForm(){
+  htaMenu.classList.toggle("open");
+  menu.classList.toggle("active");
+  this.classList.toggle("active");
+  header.classList.toggle("hide");
+  document.body.classList.add("no-scroll");
+}
+for (var i = 0; i < menuBtn.length; i++) {
+  menuBtn[i].addEventListener("click", openForm);
+}
+// —————————
+// Close Contact Form
+// —————————
+function closeForm(){
+  htaMenu.classList.remove("open");
+  menu.classList.remove("active");
+  header.classList.remove("hide");
+  document.body.classList.remove("no-scroll");
+  hta_form.style.display = "flex";
+  hta_thank_you.classList.remove("active");
+  form.reset();
+  checkSectionOffset();
+}
+htaMenuClose.addEventListener("click", closeForm);
+// —————————
+// Create Thank You Message on Form Submit
+// —————————
 var form          = document.getElementById("form"),
     hta_form      = document.getElementById("hta-form"),
     hta_thank_you = document.getElementById("hta-thank-you"),
     submit        = document.getElementById("form-submit");
 
 function createThankYou(){
-
   var name                   = form.querySelector('[name="first-name"]').value,
       company_name           = form.querySelector('[name="company-name"]').value,
       thank_you_message      = hta_thank_you.querySelector('h2'),
@@ -147,45 +174,28 @@ function createThankYou(){
       thank_you_name         = thank_you_message.querySelector(".form-name"),
       thank_you_company_name = thank_you_message_2.querySelector(".form-company-name");
 
-
   thank_you_name.innerHTML = name;
   thank_you_company_name.innerHTML = company_name;
   hta_form.style.display = "none";
   hta_thank_you.classList.add("active");
-
 }
-
-
-for (var i = 0; i < menuBtn.length; i++) {
-  menuBtn[i].addEventListener("click", toggleMenu);
-}
-
-htaMenuClose.addEventListener("click", closeMenu);
-
-window.addEventListener("scroll", _.throttle(scrollStuff, 200));
-
-window.addEventListener("load", function(){
-  checkSectionOffset();
-});
-
-window.addEventListener("resize", function(){
-  if(typeof(elem) != 'undefined' && elem != null){
-    flkty.resize();
-    flkty2.resize();
-  }
-  checkSectionOffset();
-});
-
 submit.addEventListener("click", function(e){
   e.preventDefault();
   createThankYou();
 });
-
-
-
+// —————————
+// Index utility function
+// —————————
 function index(el) {
   return [...el.parentElement.children].indexOf(el);
 }
+
+
+
+
+
+
+
 
 
 
