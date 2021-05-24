@@ -849,7 +849,7 @@ footer .copyright {
 }
 footer .copyright img {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 footer .copyright span {
   font-size: 14px;
@@ -1113,6 +1113,9 @@ footer .copyright a:hover {
     position: relative;
     bottom: 0;
     margin-top: 60px;
+  }
+  footer .copyright img {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 500px) {

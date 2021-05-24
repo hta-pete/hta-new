@@ -777,7 +777,7 @@ footer{
     bottom:30px;
     img{
       display:inline-block;
-      margin-bottom:20px;
+      margin-bottom:40px;
     }
     span{
       font-size:14px;
@@ -1052,7 +1052,11 @@ footer{
       bottom:0;
       margin-top:60px;
       //text-align:left;
+      img{
+        margin-bottom:30px;
+      }
      }
+
   }
 }
 
