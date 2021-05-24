@@ -32,9 +32,13 @@ function scrollStuff(){
     }
   }
   if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
-    if( window.scrollY > 0 ){
+    if( window.scrollY > 60 && window.innerWidth > 480 ){
       scroll_cue.classList.add("active");
-    } else{
+    }
+    else if(window.scrollY > 0 && window.innerWidth < 480){
+      scroll_cue.classList.add("active");
+    }
+    else{
       scroll_cue.classList.remove("active");
     }
   }
